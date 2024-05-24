@@ -5,7 +5,7 @@ let inventImageBase64 = '';
 function setSupplierNames() {
     $.ajax({
         method: 'get',
-        url: 'http://localhost:8080/api/v1/supplier/all',
+        url: 'http://localhost:8081/api/v1/supplier/all',
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -19,7 +19,7 @@ function setSupplierNames() {
     });
 }
 
-setSupplierNames();
+
 
 /*save inventory*/
 $('#btn-inventory-save').click(function () {
@@ -118,7 +118,7 @@ $('#btn-inventory-save').click(function () {
 
     $.ajax({
         method: 'post',
-        url: 'http://localhost:8080/api/v1/inventory',
+        url: 'http://localhost:8081/api/v1/inventory',
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -150,7 +150,7 @@ $('#tbl-inventory').on('click', '.btn-inventory-delete', function () {
 
             $.ajax({
                 method: 'DELETE',
-                url: `http://localhost:8080/api/v1/inventory?item_code=${inventory_code}`,
+                url: `http://localhost:8081/api/v1/inventory?item_code=${inventory_code}`,
                 headers: {
                     'Authorization': `Bearer ${token}`
                 },
@@ -181,7 +181,7 @@ $('#tbl-inventory').on('click', '.btn-inventory-preview', function () {
     const inventory_code = $(this).closest('tr').find('td:eq(0) .action_label').text().trim();
     $.ajax({
         method: 'get',
-        url: `http://localhost:8080/api/v1/inventory?item_code=${inventory_code}`,
+        url: `http://localhost:8081/api/v1/inventory?item_code=${inventory_code}`,
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -203,7 +203,7 @@ $('#tbl-inventory').on('click', '.btn-inventory-preview', function () {
 
             $.ajax({
                 method: 'get',
-                url: `http://localhost:8080/api/v1/inventory/sizeDetails?item_code=${inventory_code}`,
+                url: `http://localhost:8081/api/v1/inventory/sizeDetails?item_code=${inventory_code}`,
                 headers: {
                     'Authorization': `Bearer ${token}`
                 },
@@ -245,7 +245,7 @@ $('#tbl-inventory').on('click', '.btn-inventory-update', function () {
 
         $.ajax({
             method: 'get',
-            url: `http://localhost:8080/api/v1/inventory?item_code=${inventory_code}`,
+            url: `http://localhost:8081/api/v1/inventory?item_code=${inventory_code}`,
             headers: {
                 'Authorization': `Bearer ${token}`
             },
@@ -266,7 +266,7 @@ $('#tbl-inventory').on('click', '.btn-inventory-update', function () {
 
                 $.ajax({
                     method: 'get',
-                    url: `http://localhost:8080/api/v1/inventory/sizeDetails?item_code=${inventory_code}`,
+                    url: `http://localhost:8081/api/v1/inventory/sizeDetails?item_code=${inventory_code}`,
                     headers: {
                         'Authorization': `Bearer ${token}`
                     },
@@ -400,7 +400,7 @@ $('#btn-inventory-update').click(function () {
 
     $.ajax({
         method: 'put',
-        url: 'http://localhost:8080/api/v1/inventory',
+        url: 'http://localhost:8081/api/v1/inventory',
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -422,7 +422,7 @@ $('#btn-inventory-update').click(function () {
 function setSizeCodes() {
     $.ajax({
         method: 'get',
-        url: 'http://localhost:8080/api/v1/size/all',
+        url: 'http://localhost:8081/api/v1/size/all',
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -523,7 +523,7 @@ $('#txt-inventory-supplier-name').on('change', function (event) {
     console.log(sup_name);
     $.ajax({
         method: 'get',
-        url: `http://localhost:8080/api/v1/supplier/nameCode?supplier_name=${sup_name}`,
+        url: `http://localhost:8081/api/v1/supplier/nameCode?supplier_name=${sup_name}`,
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -580,7 +580,7 @@ function loadAllInventories() {
 
     $.ajax({
         method: 'GET',
-        url: 'http://localhost:8080/api/v1/inventory/all',
+        url: 'http://localhost:8081/api/v1/inventory/all',
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -688,7 +688,7 @@ function setInventoryCount() {
     $.ajax(
         {
             method: 'GET',
-            url: 'http://localhost:8080/api/v1/inventory/count',
+            url: 'http://localhost:8081/api/v1/inventory/count',
             headers: {
                 'Authorization': `Bearer ${token}`
             },

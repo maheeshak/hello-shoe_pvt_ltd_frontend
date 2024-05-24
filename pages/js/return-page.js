@@ -5,7 +5,7 @@ $('#txt-return-order-id').on('keypress', function (event) {
         var order_id = $('#txt-return-order-id').val();
 
         $.ajax({
-            url: `http://localhost:8080/api/v1/sale?order_id=${order_id}`,
+            url: `http://localhost:8081/api/v1/sale?order_id=${order_id}`,
             type: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -81,7 +81,7 @@ function setTimeAndDate(utcTimestamp) {
 function loadInventoryDetails() {
     var order_id = $('#txt-return-order-id').val();
     $.ajax({
-        url: `http://localhost:8080/api/v1/sale/saleInventory?order_id=${order_id}`,
+        url: `http://localhost:8081/api/v1/sale/saleInventory?order_id=${order_id}`,
         type: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -133,7 +133,7 @@ $('#btn-return-refresh').click(function (event) {
     var order_id = $('#txt-return-order-id').val();
 
     $.ajax({
-        url: `http://localhost:8080/api/v1/sale?order_id=${order_id}`,
+        url: `http://localhost:8081/api/v1/sale?order_id=${order_id}`,
         type: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -198,7 +198,7 @@ $('#tbl-return-order-details').on('click', '.btn-return-order', function (event)
 $('#btn-return-save').click(function () {
 
     $.ajax({
-        url: `http://localhost:8080/api/v1/return`,
+        url: `http://localhost:8081/api/v1/return`,
         type: 'POST',
         headers: {
             'Authorization': `Bearer ${token}`

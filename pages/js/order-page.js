@@ -88,7 +88,7 @@ $('#txt-order-cust-contact').on('keypress', function (event) {
         var contact = $('#txt-order-cust-contact').val();
 
         $.ajax({
-            url: `http://localhost:8080/api/v1/customer/contact?customer_contact=${contact}`,
+            url: `http://localhost:8081/api/v1/customer/contact?customer_contact=${contact}`,
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -127,7 +127,7 @@ $('#txt-order-product-code').on('keypress', function (event) {
         var inventory_code = $('#txt-order-product-code').val();
 
         $.ajax({
-            url: `http://localhost:8080/api/v1/inventory?item_code=${inventory_code}`,
+            url: `http://localhost:8081/api/v1/inventory?item_code=${inventory_code}`,
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -145,7 +145,7 @@ $('#txt-order-product-code').on('keypress', function (event) {
 
                 $.ajax({
                     method: 'get',
-                    url: `http://localhost:8080/api/v1/inventory/sizeDetails?item_code=${inventory_code}`,
+                    url: `http://localhost:8081/api/v1/inventory/sizeDetails?item_code=${inventory_code}`,
                     headers: {
                         'Authorization': `Bearer ${token}`
                     },
@@ -297,7 +297,7 @@ function clearOrderInventoryFeildes() {
 
 function setOrderID() {
     $.ajax({
-        url: `http://localhost:8080/api/v1/sale/id`,
+        url: `http://localhost:8081/api/v1/sale/id`,
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -404,7 +404,7 @@ $('#btn-place-order').click(function () {
     console.log(order);
 
     $.ajax({
-        url: 'http://localhost:8080/api/v1/sale',
+        url: 'http://localhost:8081/api/v1/sale',
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${token}`

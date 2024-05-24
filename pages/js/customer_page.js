@@ -40,7 +40,7 @@ $('#btn-cust-save').click(function () {
 
     $.ajax({
         method: 'POST',
-        url: 'http://localhost:8080/api/v1/customer',
+        url: 'http://localhost:8081/api/v1/customer',
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -64,7 +64,7 @@ $('#tbl-customer').on('click', '.btn-cust-update', function () {
 
     $.ajax({
         method: 'GET',
-        url: `http://localhost:8080/api/v1/customer?customer_code=${custId}`,
+        url: `http://localhost:8081/api/v1/customer?customer_code=${custId}`,
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -129,7 +129,7 @@ $('#btn-cust-update').click(function () {
 
     $.ajax({
         method: 'PUT',
-        url: 'http://localhost:8080/api/v1/customer',
+        url: 'http://localhost:8081/api/v1/customer',
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -165,7 +165,7 @@ $('#tbl-customer').on('click', '.btn-cust-delete', function () {
 
             $.ajax({
                 method: 'DELETE',
-                url: `http://localhost:8080/api/v1/customer?customer_code=${custId}`,
+                url: `http://localhost:8081/api/v1/customer?customer_code=${custId}`,
                 headers: {
                     'Authorization': `Bearer ${token}`
                 },
@@ -214,7 +214,7 @@ function clerCustomerFields() {
 function setCustomerCode() {
     $.ajax({
         method: 'GET',
-        url: 'http://localhost:8080/api/v1/customer/id',
+        url: 'http://localhost:8081/api/v1/customer/id',
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -230,7 +230,7 @@ function setCustomerCode() {
 function loadAllCustomers() {
     $.ajax({
         method: 'GET',
-        url: 'http://localhost:8080/api/v1/customer/all',
+        url: 'http://localhost:8081/api/v1/customer/all',
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -283,7 +283,7 @@ function setCustomerCount(){
 
     $.ajax({
         method: 'GET',
-        url: 'http://localhost:8080/api/v1/customer/count',
+        url: 'http://localhost:8081/api/v1/customer/count',
         headers: {
             'Authorization': `Bearer ${token}`
         },

@@ -81,7 +81,7 @@ $('#btn-emp-save').click(function () {
     if (valid) {
 
         $.ajax({
-            url: `http://localhost:8080/api/v1/employee`,
+            url: `http://localhost:8081/api/v1/employee`,
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -115,7 +115,7 @@ $('#tbl-employee').on('click', '.btn-emp-update', function () {
 
 
     $.ajax({
-        url: `http://localhost:8080/api/v1/employee?employee_code=${empId}`,
+        url: `http://localhost:8081/api/v1/employee?employee_code=${empId}`,
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -123,7 +123,7 @@ $('#tbl-employee').on('click', '.btn-emp-update', function () {
         success: function (employee) {
 
             $.ajax({
-                url: `http://localhost:8080/api/v1/employee/branch?employee_code=${empId}`,
+                url: `http://localhost:8081/api/v1/employee/branch?employee_code=${empId}`,
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -226,7 +226,7 @@ $('#btn-emp-update').click(function () {
     };
     console.log(employeeDTO);
     $.ajax({
-        url: `http://localhost:8080/api/v1/employee`,
+        url: `http://localhost:8081/api/v1/employee`,
         method: 'PUT',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -263,7 +263,7 @@ $('#tbl-employee').on('click', '.btn-emp-delete', function () {
 
 
             $.ajax({
-                url: `http://localhost:8080/api/v1/employee?employee_code=${empId}`,
+                url: `http://localhost:8081/api/v1/employee?employee_code=${empId}`,
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -315,7 +315,7 @@ $('#btn-emp-clear').click(function () {
 /*set employee code*/
 function setEmployeeCode() {
     $.ajax({
-        url: `http://localhost:8080/api/v1/employee/id`,
+        url: `http://localhost:8081/api/v1/employee/id`,
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -333,7 +333,7 @@ function setBranches() {
     $('#txt-emp-branch').append(new Option('Select Branch', ''));
 
     $.ajax({
-        url: `http://localhost:8080/api/v1/branch/all`,
+        url: `http://localhost:8081/api/v1/branch/all`,
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -360,7 +360,7 @@ function setDesignations() {
     $('#txt-emp-designation').empty();
     $('#txt-emp-designation').append(new Option('Select Designation', ''));
     $.ajax({
-        url: `http://localhost:8080/api/v1/employee/designations`,
+        url: `http://localhost:8081/api/v1/employee/designations`,
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -397,7 +397,7 @@ function empImgPreview(input) {
 function loadAllEmployees() {
     $('#tbl-employee tbody tr').remove();
     $.ajax({
-        url: `http://localhost:8080/api/v1/employee/all`,
+        url: `http://localhost:8081/api/v1/employee/all`,
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -412,7 +412,7 @@ function loadAllEmployees() {
                 console.log(employee);
                 (function (employee) { // Using a closure to maintain scope
                     $.ajax({
-                        url: `http://localhost:8080/api/v1/employee/branch?employee_code=${employee.employee_code}`,
+                        url: `http://localhost:8081/api/v1/employee/branch?employee_code=${employee.employee_code}`,
                         method: 'GET',
                         headers: {
                             'Authorization': `Bearer ${token}`
@@ -463,7 +463,7 @@ function clearEmployeeFields() {
 function setEmployeeCounts() {
     $.ajax({
         method: 'GET',
-        url: 'http://localhost:8080/api/v1/employee/count',
+        url: 'http://localhost:8081/api/v1/employee/count',
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -546,10 +546,10 @@ function checkValidity(employeeDTO) {
         alert('Join Date is required');
         return false;
     }
-    if (!employeeDTO.role || employeeDTO.role === 'Select role' || employeeDTO.role.trim() === '' || employeeDTO.role === null || employeeDTO.role !== 0 || employeeDTO.role !== 1){
+    /*if (!employeeDTO.role || employeeDTO.role === 'Select role' || employeeDTO.role.trim() === '' || employeeDTO.role === null || employeeDTO.role !== 0 || employeeDTO.role !== 1){
         alert('Role is required');
         return false;
-    }
+    }*/
 
     // Optional: Additional validation checks
     if (!validateEmail(employeeDTO.email)) {

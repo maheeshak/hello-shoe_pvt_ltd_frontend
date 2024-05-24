@@ -34,7 +34,7 @@ $('#btn-sup-save').click(function () {
 
     $.ajax({
         method: 'POST',
-        url: 'http://localhost:8080/api/v1/supplier',
+        url: 'http://localhost:8081/api/v1/supplier',
         contentType: 'application/json',
         data: JSON.stringify(supplier),
         headers: {
@@ -60,7 +60,7 @@ $('#tbl-supplier').on('click', '.btn-sup-update', function () {
     const supId = $(this).closest('tr').find('td:eq(0) .action_label').text().trim();
     $.ajax({
         method: 'GET',
-        url: `http://localhost:8080/api/v1/supplier?supplier_code=${supId}`,
+        url: `http://localhost:8081/api/v1/supplier?supplier_code=${supId}`,
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -116,7 +116,7 @@ $('#btn-sup-update').click(function () {
 
     $.ajax({
         method: 'PUT',
-        url: 'http://localhost:8080/api/v1/supplier',
+        url: 'http://localhost:8081/api/v1/supplier',
         contentType: 'application/json',
         data: JSON.stringify(supplier),
         headers: {
@@ -152,7 +152,7 @@ $('#tbl-supplier').on('click', '.btn-sup-delete', function () {
         if (result.isConfirmed) {
             $.ajax({
                 method: 'DELETE',
-                url: `http://localhost:8080/api/v1/supplier?supplier_code=${supId}`,
+                url: `http://localhost:8081/api/v1/supplier?supplier_code=${supId}`,
                 headers: {
                     'Authorization': `Bearer ${token}`
                 },
@@ -182,7 +182,7 @@ $('#tbl-supplier').on('click', '.btn-sup-delete', function () {
 function setSupplierCode() {
     $.ajax({
         method: 'GET',
-        url: 'http://localhost:8080/api/v1/supplier/id',
+        url: 'http://localhost:8081/api/v1/supplier/id',
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -217,7 +217,7 @@ function clearSupplierFields() {
 function loadAllSupplier() {
     $.ajax({
         method: 'GET',
-        url: 'http://localhost:8080/api/v1/supplier/all',
+        url: 'http://localhost:8081/api/v1/supplier/all',
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -252,7 +252,7 @@ function setSupplierCount() {
     $.ajax(
         {
             method: 'GET',
-            url: 'http://localhost:8080/api/v1/supplier/count',
+            url: 'http://localhost:8081/api/v1/supplier/count',
             headers: {
                 'Authorization': `Bearer ${token}`
             },

@@ -7,7 +7,7 @@ let totalSaleThisMonthValues = [];
 
 function setTopSaleInventoryThisMonth() {
     $.ajax({
-        url: `http://localhost:8080/api/v1/sale/totalSalesInventoryThis`,
+        url: `http://localhost:8081/api/v1/sale/totalSalesInventoryThis`,
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -46,7 +46,7 @@ function setTopSaleInventoryThisMonth() {
     });
 }function setTopSaleInventoryThisYear() {
     $.ajax({
-        url: `http://localhost:8080/api/v1/sale/totalSalesInventoryThisYear`,
+        url: `http://localhost:8081/api/v1/sale/totalSalesInventoryThisYear`,
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -92,7 +92,7 @@ function getTotalESalesBranchThisMonth() {
     totalSaleThisMonthValues = [];
 
     $.ajax({
-        url: `http://localhost:8080/api/v1/sale/totalSalesBranchesThis`,
+        url: `http://localhost:8081/api/v1/sale/totalSalesBranchesThis`,
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -161,7 +161,7 @@ function getBranchSalesDetails() {
     saleTotals = [];
 
     $.ajax({
-        url: `http://localhost:8080/api/v1/sale/totalSalesBranches`,
+        url: `http://localhost:8081/api/v1/sale/totalSalesBranches`,
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -237,7 +237,7 @@ function getEmpDesigCounts() {
     empDesigCounts = [0, 0, 0, 0, 0, 0];
 
     $.ajax({
-        url: `http://localhost:8080/api/v1/employee/countDesignation`,
+        url: `http://localhost:8081/api/v1/employee/countDesignation`,
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -290,7 +290,7 @@ function getTotalEmpBranch() {
     totalEmpBranchCount = [];
 
     $.ajax({
-        url: `http://localhost:8080/api/v1/employee/totalBranch`,
+        url: `http://localhost:8081/api/v1/employee/totalBranch`,
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`

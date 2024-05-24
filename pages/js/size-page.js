@@ -25,7 +25,7 @@ $('#btn-size-save').click(function () {
 
     $.ajax({
         method: 'POST',
-        url: 'http://localhost:8080/api/v1/size',
+        url: 'http://localhost:8081/api/v1/size',
         contentType: 'application/json',
         data: JSON.stringify(size),
         headers: {
@@ -74,7 +74,7 @@ $('#tbl-size tbody').on('click', '.btn-size-delete', function () {
 
             $.ajax({
                 method: 'DELETE',
-                url: `http://localhost:8080/api/v1/size?size_code=${size_code}`,
+                url: `http://localhost:8081/api/v1/size?size_code=${size_code}`,
                 headers: {
                     'Authorization': `Bearer ${token}`
                 },
@@ -121,7 +121,7 @@ function loadAllSizes() {
 
     $.ajax({
         method: 'GET',
-        url: 'http://localhost:8080/api/v1/size/all',
+        url: 'http://localhost:8081/api/v1/size/all',
         headers: {
             'Authorization': 'Bearer ' + token
         },

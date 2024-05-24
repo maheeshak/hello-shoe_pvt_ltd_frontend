@@ -13,7 +13,7 @@ $('#lbl-user-name').text(username);
 handlePageFumctionsUsers();
 
 if (!token) {
-    window.location.href = '../index.html';
+    window.location.href = '../dashboard_page.html';
 
 }
 
@@ -121,10 +121,13 @@ $('#btn-inventory').click(function () {
 });
 
 $('#btn-add-inventory').click(function () {
+
     clearInventoryFields();
     changeInputFieldsRegister();
+    setSupplierNames();
     navBarActive('#btn-inventory');
     navigateToPage('#inventory-register-page');
+
 });
 
 

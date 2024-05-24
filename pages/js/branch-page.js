@@ -22,7 +22,7 @@ $('#btn-branch-save').click(function () {
 
     $.ajax({
         method: 'post',
-        url: 'http://localhost:8080/api/v1/branch',
+        url: 'http://localhost:8081/api/v1/branch',
         contentType: 'application/json',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -46,7 +46,7 @@ $('#tbl-branch').on('click', '.btn-branch-update', function () {
 
     $.ajax({
             method: 'GET',
-            url: `http://localhost:8080/api/v1/branch?branch_code=${branch_code}`,
+            url: `http://localhost:8081/api/v1/branch?branch_code=${branch_code}`,
             headers: {
                 'Authorization': `Bearer ${token}`
             },
@@ -84,7 +84,7 @@ $('#btn-branch-update').click(function () {
 
     $.ajax({
         method: 'put',
-        url: 'http://localhost:8080/api/v1/branch',
+        url: 'http://localhost:8081/api/v1/branch',
         contentType: 'application/json',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -120,7 +120,7 @@ $('#tbl-branch').on('click', '.btn-branch-delete', function () {
 
             $.ajax({
                 method: 'DELETE',
-                url: `http://localhost:8080/api/v1/branch?branch_code=${branch_code}`,
+                url: `http://localhost:8081/api/v1/branch?branch_code=${branch_code}`,
                 headers: {
                     'Authorization': `Bearer ${token}`
                 },
@@ -162,7 +162,7 @@ function clearBranchFields() {
 function setBranchCode() {
     $.ajax({
         method: 'get',
-        url: 'http://localhost:8080/api/v1/branch/id',
+        url: 'http://localhost:8081/api/v1/branch/id',
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -179,7 +179,7 @@ function loadAllBranches() {
     $('#tbl-branch tbody tr').remove();
     $.ajax({
         method: 'get',
-        url: 'http://localhost:8080/api/v1/branch/all',
+        url: 'http://localhost:8081/api/v1/branch/all',
         headers: {
             'Authorization': `Bearer ${token}`
         },
