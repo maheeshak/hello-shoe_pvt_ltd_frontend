@@ -90,9 +90,9 @@
     </div>
     <div id="pos-content" style="display: block">
         <div class="card ml-3 mr-3"
-             style="top: 85px;position: relative;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border: 2px  black;border-radius: 30px">
-            <div class="card-header text-center" style="background-color: black;">
-                <h2 class="text-white">HELLO SHOE POS SYSTEM</h2>
+             style="top: 85px;position: relative;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border: 2px  black;border-radius: 10px">
+            <div class="card-header text-center" style="background-color:#074e57;">
+                <h3 class="text-white">HELLO SHOE POS SYSTEM</h3>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -400,10 +400,15 @@
                                     <span>Return</span></a>
                             </li>
 
+                            <li>
+                                <a id="btn-support"><img src="../assets/img/nav-support.png" alt="sidebar_img">
+                                    <span>Support</span></a>
+                            </li>
+
                             <hr>
 
                             <li>
-                                <a id="btn-report"><img src="../assets/img/nav-report.png" alt="sidebar_img">
+                                <a id="btn-report"><img src="../assets/img/nav-reports.png" alt="sidebar_img">
                                     <span>Reports</span></a>
                             </li>
 
@@ -413,57 +418,25 @@
             </div>
         </div>
 
-        <div class="page-wrapper" id="dashboard-page">
+        <div class="page-wrapper" id="dashboard-page" style="background-color: #07616E">
             <div class="content container-fluid">
 
                 <div class="row">
                     <div class="col-12 text-center">
                         <div class="card ml-3 mr-3"
                              style="top: 10px;position: relative;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border: 2px  black;border-radius: 30px">
-                            <!--<div class="card-header text-center" style="background-color: black;">
-                                <h2 class="text-white">Sales Reports</h2>
+                           <!-- <div class="card bg-dark text-white">
+                                <img class="card-img" src="../assets/img/item_sum.png" alt="Card image" style="width: 100px ; height: 100px ; padding:10px">
+                                <div class="card-img-overlay" style="background-color:black">
+                                    <h2 class="card-title" style="color: white">Hello Admin..</h2>
+                                    <p class="card-text">Welocme to the Dashboard of Hello Shoe !</p>
+                                    <p class="card-text">Last updated 3 mins ago</p>
+                                </div>
                             </div>-->
 
-                            <div class="card-body">
-                                <div class="row">
-
-                                    <div class="col-xl-6 ">
-                                        <div class="card">
-                                            <div>
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <img src="../assets/img/date.svg" alt="" style="width: 30%">
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12 p-5">
-                                                        <h1 id="lbl-dashboard-date"></h1>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
 
 
-                                    <div class="col-xl-6 ">
-                                        <div class="card">
-                                            <div>
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <img src="../assets/img/time.svg" alt="" style="width: 22%">
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12 p-5">
-                                                        <h1 id="lbl-dashboard-time"></h1>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                    </div>
-                                </div>
                                 <div class="row">
                                     <div class="col-12 text-center">
                                         <img src="../assets/img/favicon.png" style="width: 30%">
@@ -486,10 +459,10 @@
             <div class="row">
                 <div class="col-xl-12 col-sm-12 col-12">
                     <div class="breadcrumb-path mb-4">
-                        <ul class="breadcrumb">
-                            <img src="../assets/img/nav-employee.png"/>
+                        <ul class="breadcrumb" >
+                            <img src="../assets/img/item_sum.png" id="sum-img">
                         </ul>
-                        <h3>Employees</h3>
+                        <h3 class="sum-txt">Manage Employees</h3>
                     </div>
                 </div>
                 <div class="col-xl-12 col-sm-12 col-12 mb-4">
@@ -517,7 +490,7 @@
                                 Admins</label>
                         </div>
                         <div class="col-xl-6 col-sm-8 col-12">
-                            <img src="../assets/img/emp-summary.svg" class="float-right" style="width: 200px">
+                            <img src="../assets/img/undraw-emp.svg" class="float-right" style="width: 150px">
                         </div>
                     </div>
                 </div>
@@ -603,7 +576,7 @@
                             <li><label id="btn-emp-home"><i class='bx bxs-home-circle'></i>Home</label>
                             </li>
                         </ul>
-                        <h3>Register Employees</h3>
+                        <h3 class="sum-txt">Register Employees</h3>
                     </div>
                 </div>
                 <div class="col-xl-12 col-sm-12 col-12 ">
@@ -851,9 +824,9 @@
                 <div class="col-xl-12 col-sm-12 col-12">
                     <div class="breadcrumb-path mb-4">
                         <ul class="breadcrumb">
-                            <img src="../assets/img/nav-customer.png"/>
+                            <img id="sum-img" src="../assets/img/item_sum.png"/>
                         </ul>
-                        <h3>Customers</h3>
+                        <h3 class="sum-txt">Manage Customers</h3>
                     </div>
                 </div>
                 <div class="col-xl-12 col-sm-12 col-12 mb-4">
@@ -868,7 +841,7 @@
 
                         </div>
                         <div class="col-xl-6 col-sm-8 col-12">
-                            <img src="../assets/img/customer-summary.svg" class="float-right" style="width: 200px">
+                            <img src="../assets/img/undraw-customer.svg" class="float-right" style="width: 150px">
                         </div>
                     </div>
                 </div>
@@ -918,7 +891,7 @@
                             <li><label id="btn-cust-home"><i class='bx bxs-home-circle'></i>Home</label>
                             </li>
                         </ul>
-                        <h3>Register Customers</h3>
+                        <h3 class="sum-txt">Register Customers</h3>
                     </div>
                 </div>
                 <div class="col-xl-12 col-sm-12 col-12 ">
@@ -1098,10 +1071,10 @@
                 <div class="col-xl-12 col-sm-12 col-12">
                     <div class="breadcrumb-path mb-4">
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item active"><img src="../assets/img/nav-supplier.png"
+                            <li class="breadcrumb-item active"><img id="sum-img" src="../assets/img/item_sum.png"
                                                                     alt="sidebar_img"></li>
                         </ul>
-                        <h3>Suppliers</h3>
+                        <h3 class="sum-txt">Manage Suppliers</h3>
                     </div>
                 </div>
                 <div class="col-xl-12 col-sm-12 col-12 mb-4">
@@ -1119,7 +1092,7 @@
                                 <br> International</label>
                         </div>
                         <div class="col-xl-6 col-sm-8 col-12">
-                            <img src="../assets/img/sup-summary.svg" class="float-right" style="width: 200px">
+                            <img src="../assets/img/undraw-supplier.svg" class="float-right" style="width: 150px">
                         </div>
                     </div>
                 </div>
@@ -1165,7 +1138,7 @@
                             <li><label id="btn-sup-home"><i class='bx bxs-home-circle'></i>Home</label>
                             </li>
                         </ul>
-                        <h3>Register Suppliers</h3>
+                        <h3 class="sum-txt">Register Suppliers</h3>
                     </div>
                 </div>
                 <div class="col-xl-12 col-sm-12 col-12 ">
@@ -1320,10 +1293,10 @@
                 <div class="col-xl-12 col-sm-12 col-12">
                     <div class="breadcrumb-path mb-4">
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item active"><img src="../assets/img/nav-inventory.png"
-                                                                    alt="sidebar_img"></li>
+                            <li class="breadcrumb-item active"><img src="../assets/img/item_sum.png"
+                                                                    alt="sidebar_img" id="sum-img"></li>
                         </ul>
-                        <h3>Inventories</h3>
+                        <h3 class="sum-txt">Manage Inventories</h3>
                     </div>
                 </div>
                 <div class="col-xl-12 col-sm-12 col-12 mb-4">
@@ -1335,7 +1308,7 @@
                         <div class="col-xl-4 col-sm-8 col-12">
                         </div>
                         <div class="col-xl-6 col-sm-8 col-12">
-                            <img src="../assets/img/item-summary.svg" class="float-right" style="width: 150px">
+                            <img src="../assets/img/undraw-shoe.svg" class="float-right" style="width: 150px">
                         </div>
                     </div>
                 </div>
@@ -1347,7 +1320,7 @@
                             <label class="table-title" style="font-size: 25px;font-weight: 700">Inventory
                                 Summary </label>
                             <button class="btn btn-success btn-emp-add float-right" id="btn-add-inventory"
-                                    style="width: 50px"><img src="../assets/img/add-emp.png" style="width: 30px">
+                                    style="width: 50px"><img src="../assets/img/add.png" style="width: 30px">
                             </button>
                         </div>
                         <div class="table-responsive">
@@ -1384,7 +1357,7 @@
                             <li><label id="btn-inventory-home"><i class='bx bxs-home-circle'></i>Home</label>
                             </li>
                         </ul>
-                        <h3>Register Inventory</h3>
+                        <h3 class="sum-txt">Register Inventory</h3>
                     </div>
                 </div>
                 <div class="col-xl-12 col-sm-12 col-12 ">
@@ -1643,10 +1616,10 @@
                 <div class="col-xl-12 col-sm-12 col-12">
                     <div class="breadcrumb-path mb-4">
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item active"><img src="../assets/img/nav-size.png"
+                            <li class="breadcrumb-item active"><img id="sum-img" src="../assets/img/item_sum.png"
                                                                     alt="sidebar_img"></li>
                         </ul>
-                        <h3>Sizes</h3>
+                        <h3 class="sum-txt">Manage Sizes</h3>
                     </div>
                 </div>
 
@@ -1657,7 +1630,7 @@
                             <label class="table-title" style="font-size: 25px;font-weight: 700">Supplier
                                 Summary </label>
                             <button class="btn btn-success btn-emp-add float-right" id="btn-add-size"
-                                    style="width: 50px"><img src="../assets/img/add-emp.png" style="width: 30px">
+                                    style="width: 50px"><img src="../assets/img/add.png" style="width: 30px">
                             </button>
                         </div>
                         <div class="table-responsive">
@@ -1690,7 +1663,7 @@
                             <li><label id="btn-size-home"><i class='bx bxs-home-circle'></i>Home</label>
                             </li>
                         </ul>
-                        <h3>Add Size</h3>
+                        <h3 class="sum-txt">Add Size</h3>
                     </div>
                 </div>
                 <div class="col-xl-12 col-sm-12 col-12 ">
@@ -1753,9 +1726,9 @@
                 <div class="col-xl-12 col-sm-12 col-12">
                     <div class="breadcrumb-path mb-4">
                         <ul class="breadcrumb">
-                            <img src="../assets/img/nav-branch.png"/>
+                            <img id="sum-img" src="../assets/img/item_sum.png"/>
                         </ul>
-                        <h3>Branches</h3>
+                        <h3 class="sum-txt">Manage Branches</h3>
                     </div>
                 </div>
             </div>
@@ -1766,7 +1739,7 @@
                         <label class="table-title" style="font-size: 25px;font-weight: 700">Branches
                             Summary </label>
                         <button class="btn btn-success btn-emp-add float-right" id="btn-add-branch"
-                                style="width: 50px"><img src="../assets/img/add-emp.png" style="width: 30px">
+                                style="width: 50px"><img src="../assets/img/add.png" style="width: 30px">
                         </button>
                     </div>
                 </div>
@@ -1802,7 +1775,7 @@
                             <li><label id="btn-branch-home"><i class='bx bxs-home-circle'></i>Home</label>
                             </li>
                         </ul>
-                        <h3>Register Branch</h3>
+                        <h3 class="sum-txt">Register Branch</h3>
                     </div>
                 </div>
                 <div class="col-xl-12 col-sm-12 col-12 ">
@@ -2226,8 +2199,8 @@
 
 
 <script src="../pages/js/navigation.js"></script>
-<script src="../pages/js/employee-page.js"></script>
-<script src="../pages/js/customer-page.js"></script>
+<script src="../pages/js/employee_page.js"></script>
+<script src="../pages/js/customer_page.js"></script>
 <script src="../pages/js/supplier-page.js"></script>
 <script src="../pages/js/size-page.js"></script>
 <script src="../pages/js/branch-page.js"></script>
