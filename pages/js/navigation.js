@@ -200,6 +200,13 @@ $('#btn-report').click(function () {
 
 });
 
+$('#btn-users').click(function () {
+    navBarActive('#btn-users');
+    navigateToPage('#users-page');
+    loadAllUsers();
+
+})
+
 function navigateToPage(page) {
     $('#dashboard-page').css('display', 'none');
     $('#employee-page').css('display', 'none');
@@ -216,6 +223,7 @@ function navigateToPage(page) {
     $('#branch-page').css('display', 'none');
     $('#return-page').css('display', 'none');
     $('#report-page').css('display', 'none');
+    $('#users-page').css('display', 'none');
 
 
     if (page === '#supplier-page') {
@@ -247,6 +255,7 @@ function navBarActive(page) {
     $('#btn-branch').parent().removeClass('active');
     $('#btn-return').parent().removeClass('active');
     $('#btn-report').parent().removeClass('active');
+    $('#btn-users').parent().removeClass('active');
 
 
     $(page).parent().addClass('active');
@@ -267,11 +276,13 @@ function handlePageFumctionsUsers() {
         $('#btn-size').css('display', 'block');
         $('#btn-branch').css('display', 'block');
         $('#btn-return').css('display', 'block');
+
     } else {
         $('#btn-employee').css('display', 'none');
         $('#btn-supplier').css('display', 'none');
         $('#btn-branch').css('display', 'none');
         $('#btn-report').css('display', 'none');
+        $('#btn-users').css('display', 'none');
     }
 }
 
