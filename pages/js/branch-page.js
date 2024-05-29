@@ -19,22 +19,24 @@ $('#btn-branch-save').click(function () {
         contact: contact
     };
 
+    if(checkValidity(branch)){
 
-    $.ajax({
-        method: 'post',
-        url: 'http://localhost:8081/api/v1/branch',
-        contentType: 'application/json',
-        headers: {
-            'Authorization': `Bearer ${token}`
-        },
-        data: JSON.stringify(branch),
-        success: function () {
-            alert('Branch has been saved successfully');
-            clearBranchFields();
-            loadAllBranches();
-            setBranchCode();
-        }
-    });
+        $.ajax({
+            method: 'post',
+            url: 'http://localhost:8081/api/v1/branch',
+            contentType: 'application/json',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            },
+            data: JSON.stringify(branch),
+            success: function () {
+                alert('Branch has been saved successfully');
+                clearBranchFields();
+                loadAllBranches();
+                setBranchCode();
+            }
+        });
+    }
 
 });
 
@@ -215,4 +217,42 @@ function loadAllBranches() {
             }
         }
     });
+}
+
+function checkValidity(branch) {
+    const showError = (message) => {
+        Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: message,
+            showConfirmButton: false,
+            timer: 1500
+        });
+    };
+
+    if (branch.branch_code === '') {
+        showError('Branch code is required');
+        return;
+    }
+    if (branch.branch_name === '') {
+        showError('Branch name is required');
+        return;
+    }
+    if (branch.branch_manager === '') {
+        showError('Branch manager is required');
+        return;
+    }
+    if (branch.no_of_employee === '') {
+        showError('Number of employees is required');
+        return;
+    }
+    if (branch.address === '') {
+        showError('Address is required');
+        return;
+    }
+    if (branch.contact === '') {
+        showError('Contact is required');
+        return;
+    }
+    return true;
 }
