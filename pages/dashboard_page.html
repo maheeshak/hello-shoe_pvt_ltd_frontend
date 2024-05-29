@@ -408,6 +408,11 @@
                             <hr>
 
                             <li>
+                                <a id="btn-users"><img src="../assets/img/nav-user.png" alt="sidebar_img">
+                                    <span>User</span></a>
+                            </li>
+
+                            <li>
                                 <a id="btn-report"><img src="../assets/img/nav-reports.png" alt="sidebar_img">
                                     <span>Reports</span></a>
                             </li>
@@ -422,7 +427,7 @@
             <div class="content container-fluid">
 
                 <div class="row">
-                    <div class="col-3 text-center" >
+                    <div class="col-3 text-center">
                         <div class="card ml-3 mr-3"
                              style="top: 10px;position: relative;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border: 2px  black;border-radius: 10px; background-color: white;">
                             <div class="row">
@@ -472,911 +477,442 @@
                 </div>
 
 
-
                 <div class="row">
                     <div class="col-12 text-center">
                         <div class="card ml-3 mr-3"
-                             style="top: 10px;position: relative;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border: 2px  black;border-radius: 10px; background-color: white" >
+                             style="top: 10px;position: relative;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border: 2px  black;border-radius: 10px; background-color: white">
                             <div class="row">
                                 <div class="col-12 text-center">
                                     <img src="../assets/img/favicon.png" style="width: 30%">
                                 </div>
 
 
-
                             </div>
                         </div>
                     </div>
 
 
-
-            </div>
-
-        </div>
-    </div>
-</div>
-
-
-<!--employee page-->
-
-<div class="page-wrapper" id="employee-page">
-    <div class="content container-fluid">
-        <div class="row">
-            <div class="col-xl-12 col-sm-12 col-12">
-                <div class="breadcrumb-path mb-4">
-                    <ul class="breadcrumb">
-                        <img src="../assets/img/item_sum.png" id="sum-img">
-                    </ul>
-                    <h3 class="sum-txt">Manage Employees</h3>
                 </div>
-            </div>
-            <div class="col-xl-12 col-sm-12 col-12 mb-4">
-                <!-- <div class="head-link-set">
-                     <ul>
-                         <li><a class="active" href="#">All</a></li>
-                         <li><a href="employee-team.html">Teams</a></li>
-                         <li><a href="employee-office.html">Offices</a></li>
-                     </ul>
-                     <a class="btn-add" href="add-employee.html"><i data-feather="plus"></i> Add Person</a>
-                 </div>-->
-            </div>
-            <div class="col-xl-12 col-sm-12 col-12 mb-4">
-                <div class="row">
-                    <div class="col-xl-2 col-sm-8 col-12">
-                        <label class="employee_count text-center"><span id="total-employees"></span><br> Total
-                            Employees</label>
-                    </div>
-                    <div class="col-xl-2 col-sm-8 col-12">
-                        <label class="employee_count text-center"><span id="total-users"></span><br> Total
-                            Users</label>
-                    </div>
-                    <div class="col-xl-2 col-sm-8 col-12">
-                        <label class="employee_count text-center"><span id="total-admins"></span><br> Total
-                            Admins</label>
-                    </div>
-                    <div class="col-xl-6 col-sm-8 col-12">
-                        <img src="../assets/img/undraw-emp.svg" class="float-right" style="width: 150px">
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-12 col-sm-12 col-12 mb-4">
-                <div class="card">
-                    <div class="table-heading">
-                        <!-- Button here -->
-                        <label class="table-title" style="font-size: 25px;font-weight: 700">Employee
-                            Summary </label>
-                        <button class="btn btn-success btn-emp-add float-right" id="btn-register-employee"
-                                style="width: 50px"><img src="../assets/img/add-emp.png" style="width: 30px">
-                        </button>
-                    </div>
 
-                </div>
-                <div class="table-responsive">
-                    <table class="table  custom-table no-footer" id="tbl-employee">
-                        <thead>
-                        <tr>
-                            <th>Code</th>
-                            <th>Name</th>
-                            <th>Designation</th>
-                            <th>Contact</th>
-                            <th>Branch</th>
-                            <th>Role</th>
-                            <th>Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-
-                        </tr>
-                        <tr>
-                            <td>
-                                <label class="action_label">E002</label>
-                            </td>
-                            <td>
-                                <label>Richard Wilson </label>
-                            </td>
-                            <td>
-                                <label>Web Developer</label>
-                            </td>
-                            <td>
-                                <label> +1 612-345-3481</label>
-                            </td>
-                            <td>
-                                <label>Kottawa</label>
-                            </td>
-                            <td>
-                                <label>Admin</label>
-                            </td>
-
-                            <td>
-                                <div class="action-label">
-                                    <a class="btn btn-warning btn-emp-update"><img src="../assets/img/edit.png"
-                                                                                   alt="edit"
-                                                                                   style="width: 20px; height: 20px;"/></a>
-                                    <a class="btn btn-danger btn-emp-delete"><img src="../assets/img/remove.png"
-                                                                                  alt="delete"
-                                                                                  style="width: 20px; height: 20px;"/></a>
-                                </div>
-                            </td>
-
-                        </tr>
-
-                        </tbody>
-                    </table>
-                </div>
             </div>
         </div>
     </div>
-</div>
 
 
-<!--employee register page-->
+    <!--employee page-->
 
-<div class="page-wrapper" id="employee-register-page">
-    <div class="content container-fluid">
-        <div class="row">
-            <div class="col-xl-12 col-sm-12 col-12 ">
-                <div class="breadcrumb-path mb-4">
-                    <ul class="breadcrumb">
-                        <li><label id="btn-emp-home"><i class='bx bxs-home-circle'></i>Home</label>
-                        </li>
-                    </ul>
-                    <h3 class="sum-txt">Register Employees</h3>
+    <div class="page-wrapper" id="employee-page">
+        <div class="content container-fluid">
+            <div class="row">
+                <div class="col-xl-12 col-sm-12 col-12">
+                    <div class="breadcrumb-path mb-4">
+                        <ul class="breadcrumb">
+                            <img src="../assets/img/item_sum.png" id="sum-img">
+                        </ul>
+                        <h3 class="sum-txt">Manage Employees</h3>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xl-12 col-sm-12 col-12 ">
-                <div class="card">
-                    <div class="card-header">
-                        <h2 class="card-titles">Basic Details</h2>
-                    </div>
-                    <div class="card-body">
-
-                        <div class="row justify-content-center">
-                            <div class="mt-3">
-                                <img id="emp-img-preview" class="img-fluid custom-image" alt="Image Preview"
-                                     src="/assets/img/no-image-img.jpg">
-                            </div>
-
-
+                <div class="col-xl-12 col-sm-12 col-12 mb-4">
+                    <!-- <div class="head-link-set">
+                         <ul>
+                             <li><a class="active" href="#">All</a></li>
+                             <li><a href="employee-team.html">Teams</a></li>
+                             <li><a href="employee-office.html">Offices</a></li>
+                         </ul>
+                         <a class="btn-add" href="add-employee.html"><i data-feather="plus"></i> Add Person</a>
+                     </div>-->
+                </div>
+                <div class="col-xl-12 col-sm-12 col-12 mb-4">
+                    <div class="row">
+                        <div class="col-xl-2 col-sm-8 col-12">
+                            <label class="employee_count text-center"><span id="total-employees"></span><br> Total
+                                Employees</label>
                         </div>
-                        <div class="row justify-content-center">
-                            <div class="mb-3">
-                                <label for="employee_image" class="form-label">Employee Image</label>
-                                <input class="form-control" type="file" id="employee_image"
-                                       onchange=" empImgPreview(this)">
-                            </div>
-
+                        <div class="col-xl-2 col-sm-8 col-12">
+                            <label class="employee_count text-center"><span id="total-users"></span><br> Total
+                                Users</label>
                         </div>
-
-                        <div class="row">
-
-                            <div class="col-xl-6 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" placeholder="Name" id="txt-emp-name">
-                                </div>
-                            </div>
-
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Gender</label>
-                                    <select class="select" id="txt-emp-gender">
-                                        <option value="Select gender">Gender</option>
-                                        <option value="MALE">Male</option>
-                                        <option value="FEMALE">Female</option>
-                                    </select>
-                                </div>
-                            </div>
-
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Civil Status</label>
-                                    <select class="select" id="txt-emp-status">
-                                        <option value="Select status">Civil Status</option>
-                                        <option value="Single">Single</option>
-                                        <option value="Married">Married</option>
-                                        <option value="Divorced">Divorced</option>
-                                        <option value="Widowed">Widowed</option>
-
-
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!--DOB-->
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Date of Birth</label>
-                                    <input type="date" placeholder="Date of Birth" id="txt-emp-dob">
-                                </div>
-                            </div>
-
+                        <div class="col-xl-2 col-sm-8 col-12">
+                            <label class="employee_count text-center"><span id="total-admins"></span><br> Total
+                                Admins</label>
                         </div>
-
-
-                        <div class="row">
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Building No / Name</label>
-                                    <input type="text" placeholder="Building No / Name" id="txt-emp-build-no">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Lane</label>
-                                    <input type="text" placeholder="Lane" id="txt-emp-lane">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Main City</label>
-                                    <input type="text" placeholder="Main City" id="txt-emp-city">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Main State</label>
-                                    <input type="text" placeholder="Main State" id="txt-emp-state">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Postal Code</label>
-                                    <input type="text" placeholder="Postal Code" id="txt-emp-post-code">
-                                </div>
-                            </div>
-
-
+                        <div class="col-xl-6 col-sm-8 col-12">
+                            <img src="../assets/img/undraw-emp.svg" class="float-right" style="width: 150px">
                         </div>
-
                     </div>
-
-
-                    <div class="card-header">
-                        <h2 class="card-titles">Contact Details</h2>
-                    </div>
-
-
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Contact</label>
-                                    <input type="text" placeholder="Contact" id="txt-emp-contact">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Emergency Contact</label>
-                                    <input type="text" placeholder="Emergency Contact" id="txt-emp-emergency">
-                                </div>
-                            </div>
-
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Name of guardian</label>
-                                    <input type="text" placeholder="Name of guardian" id="txt-emp-guardian">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <input type="text" placeholder="Email" id="txt-emp-email">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="card-header">
-                        <h2 class="card-titles">Working Details</h2>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Employee code</label>
-                                    <input type="text" placeholder="E001" disabled id="txt-emp-code">
-                                </div>
-                            </div>
-
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Designation</label>
-                                    <select class="select" id="txt-emp-designation">
-
-
-                                    </select>
-                                </div>
-                            </div>
-
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Branch</label>
-                                    <select class="select" id="txt-emp-branch">
-
-                                    </select>
-                                </div>
-                            </div>
-
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Date of Join</label>
-                                    <input type="date" placeholder="Date of Join" id="txt-emp-join-date">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Access Role</label>
-                                    <select class="select" id="txt-emp-role">
-                                        <option value="Select role">Access Role</option>
-                                        <option value="ADMIN">Admin</option>
-                                        <option value="USER">User</option>
-                                        <option value="No Access">No Access</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div>
-                        <div class="row justify-content-end mb-5 mr-5">
-
-                            <button class="btn btn-primary text-white btn-operations" id="btn-emp-clear">Clear
+                </div>
+                <div class="col-xl-12 col-sm-12 col-12 mb-4">
+                    <div class="card">
+                        <div class="table-heading">
+                            <!-- Button here -->
+                            <label class="table-title" style="font-size: 25px;font-weight: 700">Employee
+                                Summary </label>
+                            <button class="btn btn-success btn-emp-add float-right" id="btn-register-employee"
+                                    style="width: 50px"><img src="../assets/img/add-emp.png" style="width: 30px">
                             </button>
-                            <button class="btn btn-warning btn-operations" id="btn-emp-update"
-                                    style="display: none;">Update
-                            </button>
-                            <button class="btn btn-success btn-operations" id="btn-emp-save">Save</button>
-
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-        </div>
-    </div>
-
-
-</div>
-
-
-<!--customer page-->
-
-<div class="page-wrapper" id="customer-page">
-    <div class="content container-fluid">
-        <div class="row">
-            <div class="col-xl-12 col-sm-12 col-12">
-                <div class="breadcrumb-path mb-4">
-                    <ul class="breadcrumb">
-                        <img id="sum-img" src="../assets/img/item_sum.png"/>
-                    </ul>
-                    <h3 class="sum-txt">Manage Customers</h3>
-                </div>
-            </div>
-            <div class="col-xl-12 col-sm-12 col-12 mb-4">
-            </div>
-            <div class="col-xl-12 col-sm-12 col-12 mb-4">
-                <div class="row">
-                    <div class="col-xl-2 col-sm-8 col-12">
-                        <label class="employee_count text-center"><span id="lbl-cust-count"></span><br> Total
-                            Customers</label>
-                    </div>
-                    <div class="col-xl-4 col-sm-8 col-12">
-
-                    </div>
-                    <div class="col-xl-6 col-sm-8 col-12">
-                        <img src="../assets/img/undraw-customer.svg" class="float-right" style="width: 150px">
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-12 col-sm-12 col-12 mb-4">
-                <div class="card">
-                    <div class="table-heading">
-                        <!-- Button here -->
-                        <label class="table-title" style="font-size: 25px;font-weight: 700">Customer
-                            Summary </label>
-                        <button class="btn btn-success btn-emp-add float-right" id="btn-register-customer"
-                                style="width: 50px"><img src="../assets/img/add-emp.png" style="width: 30px">
-                        </button>
-                    </div>
-
-                </div>
-                <div class="table-responsive">
-                    <table class="table  custom-table no-footer" id="tbl-customer">
-                        <thead>
-                        <tr>
-                            <th>Code</th>
-                            <th>Name</th>
-                            <th>Level</th>
-                            <th>Contact</th>
-                            <th>email</th>
-                            <th>Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!--customer register page-->
-
-<div class="page-wrapper" id="customer-register-page">
-    <div class="content container-fluid">
-        <div class="row">
-            <div class="col-xl-12 col-sm-12 col-12 ">
-                <div class="breadcrumb-path mb-4">
-                    <ul class="breadcrumb">
-                        <li><label id="btn-cust-home"><i class='bx bxs-home-circle'></i>Home</label>
-                        </li>
-                    </ul>
-                    <h3 class="sum-txt">Register Customers</h3>
-                </div>
-            </div>
-            <div class="col-xl-12 col-sm-12 col-12 ">
-                <div class="card">
-                    <div class="card-header">
-                        <h2 class="card-titles">Basic Details</h2>
-                    </div>
-                    <div class="card-body">
-
-
-                        <div class="row">
-
-                            <div class="col-xl-6 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" placeholder="Name" id="txt-cust-name">
-                                </div>
-                            </div>
-
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Gender</label>
-                                    <select class="select" id="txt-cust-gender">
-                                        <option value="Select leave">Gender</option>
-                                        <option value="MALE">Male</option>
-                                        <option value="FEMALE">Female</option>
-                                    </select>
-                                </div>
-                            </div>
-
-
-                            <!--DOB-->
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Date of Birth</label>
-                                    <input type="date" placeholder="Date of Birth" id="txt-cust-dob">
-                                </div>
-                            </div>
-
                         </div>
 
-
-                        <div class="row">
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Building No / Name</label>
-                                    <input type="text" placeholder="Building No / Name" id="txt-cust-build-no">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Lane</label>
-                                    <input type="text" placeholder="Lane" id="txt-cust-lane">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Main City</label>
-                                    <input type="text" placeholder="Main City" id="txt-cust-city">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Main State</label>
-                                    <input type="text" placeholder="Main State" id="txt-cust-state">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Postal Code</label>
-                                    <input type="text" placeholder="Postal Code" id="txt-cust-post-code">
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="card-header">
-                        <h2 class="card-titles">Contact Details</h2>
-                    </div>
-
-
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Contact</label>
-                                    <input type="text" placeholder="Contact" id="txt-cust-contact">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <input type="text" placeholder="Email" id="txt-cust-email">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="card-header">
-                        <h2 class="card-titles">Customer Details</h2>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Customer code</label>
-                                    <input type="text" placeholder="C001" disabled id="txt-cust-code">
-                                </div>
-                            </div>
-
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Level</label>
-                                    <select class="select" id="txt-cust-level">
-                                        <option value="">Level</option>
-                                        <option value="GOLD">GOLD</option>
-                                        <option value="SILVER">SILVER</option>
-                                        <option value="BRONZE">BRONZE</option>
-                                        <option value="NEW">NEW</option>
-                                    </select>
-                                </div>
-                            </div>
-
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Register Date</label>
-                                    <input type="date" placeholder="Date of Join" id="txt-cust-reg-date">
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                    <div>
-                        <div class="row justify-content-end mb-5 mr-5">
-
-                            <button class="btn btn-primary text-white btn-operations" id="btn-cust-clear">Clear
-                            </button>
-                            <button class="btn btn-warning btn-operations" id="btn-cust-update"
-                                    style="display: none;">Update
-                            </button>
-                            <button class="btn btn-success btn-operations" id="btn-cust-save">Save</button>
-
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-
-
-</div>
-
-
-<!--Supplier page-->
-<div class="page-wrapper" id="supplier-page">
-    <div class="content container-fluid">
-        <div class="row">
-            <div class="col-xl-12 col-sm-12 col-12">
-                <div class="breadcrumb-path mb-4">
-                    <ul class="breadcrumb">
-                        <li class="breadcrumb-item active"><img id="sum-img" src="../assets/img/item_sum.png"
-                                                                alt="sidebar_img"></li>
-                    </ul>
-                    <h3 class="sum-txt">Manage Suppliers</h3>
-                </div>
-            </div>
-            <div class="col-xl-12 col-sm-12 col-12 mb-4">
-                <div class="row">
-                    <div class="col-xl-2 col-sm-8 col-12">
-                        <label class="employee_count text-center"><span id="lbl-supplier-total"></span> <br>
-                            Total Supplier</label>
-                    </div>
-                    <div class="col-xl-2 col-sm-8 col-12">
-                        <label class="employee_count text-center"><span id="lbl-supplier-local"></span> <br>
-                            Local</label>
-                    </div>
-                    <div class="col-xl-2 col-sm-8 col-12">
-                        <label class="employee_count text-center"><span id="lbl-supplier-international"></span>
-                            <br> International</label>
-                    </div>
-                    <div class="col-xl-6 col-sm-8 col-12">
-                        <img src="../assets/img/undraw-supplier.svg" class="float-right" style="width: 150px">
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-12 col-sm-12 col-12 mb-4">
-                <div class="card">
-                    <div class="table-heading">
-                        <!-- Button here -->
-                        <label class="table-title" style="font-size: 25px;font-weight: 700">Supplier
-                            Summary </label>
-                        <button class="btn btn-success btn-emp-add float-right" id="btn-register-supplier"
-                                style="width: 50px"><img src="../assets/img/add-emp.png" style="width: 30px">
-                        </button>
-                    </div>
-                </div>
-                <div class="table-responsive">
-                    <table class="table  custom-table no-footer" id="tbl-supplier">
-                        <thead>
-                        <tr>
-                            <th>Code</th>
-                            <th>Name</th>
-                            <th>Contact</th>
-                            <th>Category</th>
-                            <th>Country</th>
-                            <th>Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- add supplier page-->
-<div class="page-wrapper" id="supplier-register-page">
-    <div class="content container-fluid">
-        <div class="row">
-            <div class="col-xl-12 col-sm-12 col-12 ">
-                <div class="breadcrumb-path mb-4">
-                    <ul class="breadcrumb">
-                        <li><label id="btn-sup-home"><i class='bx bxs-home-circle'></i>Home</label>
-                        </li>
-                    </ul>
-                    <h3 class="sum-txt">Register Suppliers</h3>
-                </div>
-            </div>
-            <div class="col-xl-12 col-sm-12 col-12 ">
-                <div class="card">
-                    <div class="card-header">
-                        <h2 class="card-titles">Basic Details</h2>
-                    </div>
-                    <div class="card-body">
-
-
-                        <div class="row">
-
-                            <div class="col-xl-4 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Supplier Code</label>
-                                    <input type="text" placeholder="Supplier Id" id="txt-sup-code" readonly>
-                                </div>
-                            </div>
-
-
-                            <div class="col-xl-4 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" placeholder="Name" id="txt-sup-name">
-                                </div>
-                            </div>
-
-
-                            <!--Category-->
-                            <div class="col-xl-4 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Category</label>
-                                    <select class="select" id="txt-sup-category">
-                                        <option value="">Category</option>
-                                        <option value="INTERNATIONAL">International</option>
-                                        <option value="LOCAL">Local</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <div class="row">
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Building No / Name</label>
-                                    <input type="text" placeholder="Building No / Name"
-                                           id="txt-sup-building-no">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Lane</label>
-                                    <input type="text" placeholder="Lane" id="txt-sup-lane">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Main City</label>
-                                    <input type="text" placeholder="Main City" id="txt-sup-city">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>State</label>
-                                    <input type="text" placeholder="Main State" id="txt-sup-state">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Postal Code</label>
-                                    <input type="text" placeholder="Postal Code" id="txt-sup-postal-code">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Country</label>
-                                    <input type="text" placeholder="Country" id="txt-sup-country">
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="card-header">
-                        <h2 class="card-titles">Contact Details</h2>
-                    </div>
-
-
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Contact</label>
-                                    <input type="text" placeholder="Contact" id="txt-sup-contact">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Land Line</label>
-                                    <input type="text" placeholder="Contact" id="txt-sup-land-line">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <input type="text" placeholder="Email" id="txt-sup-email">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div>
-                        <div class="row justify-content-end mb-5 mr-5">
-
-                            <button class="btn btn-primary text-white btn-operations" id="btn-sup-clear">Clear
-                            </button>
-                            <button class="btn btn-warning btn-operations" id="btn-sup-update"
-                                    style="display: none;">Update
-                            </button>
-                            <button class="btn btn-success btn-operations" id="btn-sup-save">Save</button>
-
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<!--Inventory page-->
-<div class="page-wrapper" id="inventory-page">
-    <div class="content container-fluid">
-        <div class="row">
-            <div class="col-xl-12 col-sm-12 col-12">
-                <div class="breadcrumb-path mb-4">
-                    <ul class="breadcrumb">
-                        <li class="breadcrumb-item active"><img src="../assets/img/item_sum.png"
-                                                                alt="sidebar_img" id="sum-img"></li>
-                    </ul>
-                    <h3 class="sum-txt">Manage Inventories</h3>
-                </div>
-            </div>
-            <div class="col-xl-12 col-sm-12 col-12 mb-4">
-                <div class="row">
-                    <div class="col-xl-2 col-sm-8 col-12">
-                        <label class="employee_count text-center"><span id="lbl-inventory-count">7</span> <br>
-                            Total Inventories</label>
-                    </div>
-                    <div class="col-xl-4 col-sm-8 col-12">
-                    </div>
-                    <div class="col-xl-6 col-sm-8 col-12">
-                        <img src="../assets/img/undraw-shoe.svg" class="float-right" style="width: 150px">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-12 col-sm-12 col-12 mb-4">
-                <div class="card">
-                    <div class="table-heading">
-                        <!-- Button here -->
-                        <label class="table-title" style="font-size: 25px;font-weight: 700">Inventory
-                            Summary </label>
-                        <button class="btn btn-success btn-emp-add float-right" id="btn-add-inventory"
-                                style="width: 50px"><img src="../assets/img/add.png" style="width: 30px">
-                        </button>
                     </div>
                     <div class="table-responsive">
-                        <table class="table  custom-table no-footer" id="tbl-inventory">
+                        <table class="table  custom-table no-footer" id="tbl-employee">
                             <thead>
                             <tr>
-                                <th>Inventory Code</th>
-                                <th>Description</th>
-                                <th>Supplier</th>
-                                <th>Occasion</th>
-                                <th>Verities</th>
+                                <th>Code</th>
+                                <th>Name</th>
+                                <th>Designation</th>
+                                <th>Contact</th>
+                                <th>Branch</th>
+                                <th>Role</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="action_label">E002</label>
+                                </td>
+                                <td>
+                                    <label>Richard Wilson </label>
+                                </td>
+                                <td>
+                                    <label>Web Developer</label>
+                                </td>
+                                <td>
+                                    <label> +1 612-345-3481</label>
+                                </td>
+                                <td>
+                                    <label>Kottawa</label>
+                                </td>
+                                <td>
+                                    <label>Admin</label>
+                                </td>
+
+                                <td>
+                                    <div class="action-label">
+                                        <a class="btn btn-warning btn-emp-update"><img src="../assets/img/edit.png"
+                                                                                       alt="edit"
+                                                                                       style="width: 20px; height: 20px;"/></a>
+                                        <a class="btn btn-danger btn-emp-delete"><img src="../assets/img/remove.png"
+                                                                                      alt="delete"
+                                                                                      style="width: 20px; height: 20px;"/></a>
+                                    </div>
+                                </td>
+
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--employee register page-->
+
+    <div class="page-wrapper" id="employee-register-page">
+        <div class="content container-fluid">
+            <div class="row">
+                <div class="col-xl-12 col-sm-12 col-12 ">
+                    <div class="breadcrumb-path mb-4">
+                        <ul class="breadcrumb">
+                            <li><label id="btn-emp-home"><i class='bx bxs-home-circle'></i>Home</label>
+                            </li>
+                        </ul>
+                        <h3 class="sum-txt">Register Employees</h3>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-sm-12 col-12 ">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-titles">Basic Details</h2>
+                        </div>
+                        <div class="card-body">
+
+                            <div class="row justify-content-center">
+                                <div class="mt-3">
+                                    <img id="emp-img-preview" class="img-fluid custom-image" alt="Image Preview"
+                                         src="/assets/img/no-image-img.jpg">
+                                </div>
+
+
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="mb-3">
+                                    <label for="employee_image" class="form-label">Employee Image</label>
+                                    <input class="form-control" type="file" id="employee_image"
+                                           onchange=" empImgPreview(this)">
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-xl-6 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input type="text" placeholder="Name" id="txt-emp-name">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Gender</label>
+                                        <select class="select" id="txt-emp-gender">
+                                            <option value="Select gender">Gender</option>
+                                            <option value="MALE">Male</option>
+                                            <option value="FEMALE">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Civil Status</label>
+                                        <select class="select" id="txt-emp-status">
+                                            <option value="Select status">Civil Status</option>
+                                            <option value="Single">Single</option>
+                                            <option value="Married">Married</option>
+                                            <option value="Divorced">Divorced</option>
+                                            <option value="Widowed">Widowed</option>
+
+
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!--DOB-->
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Date of Birth</label>
+                                        <input type="date" placeholder="Date of Birth" id="txt-emp-dob">
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="row">
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Building No / Name</label>
+                                        <input type="text" placeholder="Building No / Name" id="txt-emp-build-no">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Lane</label>
+                                        <input type="text" placeholder="Lane" id="txt-emp-lane">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Main City</label>
+                                        <input type="text" placeholder="Main City" id="txt-emp-city">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Main State</label>
+                                        <input type="text" placeholder="Main State" id="txt-emp-state">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Postal Code</label>
+                                        <input type="text" placeholder="Postal Code" id="txt-emp-post-code">
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-header">
+                            <h2 class="card-titles">Contact Details</h2>
+                        </div>
+
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Contact</label>
+                                        <input type="text" placeholder="Contact" id="txt-emp-contact">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Emergency Contact</label>
+                                        <input type="text" placeholder="Emergency Contact" id="txt-emp-emergency">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Name of guardian</label>
+                                        <input type="text" placeholder="Name of guardian" id="txt-emp-guardian">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="text" placeholder="Email" id="txt-emp-email">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-header">
+                            <h2 class="card-titles">Working Details</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Employee code</label>
+                                        <input type="text" placeholder="E001" disabled id="txt-emp-code">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Designation</label>
+                                        <select class="select" id="txt-emp-designation">
+
+
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Branch</label>
+                                        <select class="select" id="txt-emp-branch">
+
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Date of Join</label>
+                                        <input type="date" placeholder="Date of Join" id="txt-emp-join-date">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Access Role</label>
+                                        <select class="select" id="txt-emp-role">
+                                            <option value="Select role">Access Role</option>
+                                            <option value="ADMIN">Admin</option>
+                                            <option value="USER">User</option>
+                                            <option value="No Access">No Access</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div>
+                            <div class="row justify-content-end mb-5 mr-5">
+
+                                <button class="btn btn-primary text-white btn-operations" id="btn-emp-clear">Clear
+                                </button>
+                                <button class="btn btn-warning btn-operations" id="btn-emp-update"
+                                        style="display: none;">Update
+                                </button>
+                                <button class="btn btn-success btn-operations" id="btn-emp-save">Save</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!--customer page-->
+
+    <div class="page-wrapper" id="customer-page">
+        <div class="content container-fluid">
+            <div class="row">
+                <div class="col-xl-12 col-sm-12 col-12">
+                    <div class="breadcrumb-path mb-4">
+                        <ul class="breadcrumb">
+                            <img id="sum-img" src="../assets/img/item_sum.png"/>
+                        </ul>
+                        <h3 class="sum-txt">Manage Customers</h3>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-sm-12 col-12 mb-4">
+                </div>
+                <div class="col-xl-12 col-sm-12 col-12 mb-4">
+                    <div class="row">
+                        <div class="col-xl-2 col-sm-8 col-12">
+                            <label class="employee_count text-center"><span id="lbl-cust-count"></span><br> Total
+                                Customers</label>
+                        </div>
+                        <div class="col-xl-4 col-sm-8 col-12">
+
+                        </div>
+                        <div class="col-xl-6 col-sm-8 col-12">
+                            <img src="../assets/img/undraw-customer.svg" class="float-right" style="width: 150px">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-sm-12 col-12 mb-4">
+                    <div class="card">
+                        <div class="table-heading">
+                            <!-- Button here -->
+                            <label class="table-title" style="font-size: 25px;font-weight: 700">Customer
+                                Summary </label>
+                            <button class="btn btn-success btn-emp-add float-right" id="btn-register-customer"
+                                    style="width: 50px"><img src="../assets/img/add-emp.png" style="width: 30px">
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table  custom-table no-footer" id="tbl-customer">
+                            <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Name</th>
+                                <th>Level</th>
+                                <th>Contact</th>
+                                <th>email</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -1389,842 +925,1418 @@
             </div>
         </div>
     </div>
-</div>
 
 
-<!-- add Inventory page-->
-<div class="page-wrapper" id="inventory-register-page">
-    <div class="content container-fluid">
-        <div class="row">
-            <div class="col-xl-12 col-sm-12 col-12 ">
-                <div class="breadcrumb-path mb-4">
-                    <ul class="breadcrumb">
-                        <li><label id="btn-inventory-home"><i class='bx bxs-home-circle'></i>Home</label>
-                        </li>
-                    </ul>
-                    <h3 class="sum-txt">Register Inventory</h3>
+    <!--customer register page-->
+
+    <div class="page-wrapper" id="customer-register-page">
+        <div class="content container-fluid">
+            <div class="row">
+                <div class="col-xl-12 col-sm-12 col-12 ">
+                    <div class="breadcrumb-path mb-4">
+                        <ul class="breadcrumb">
+                            <li><label id="btn-cust-home"><i class='bx bxs-home-circle'></i>Home</label>
+                            </li>
+                        </ul>
+                        <h3 class="sum-txt">Register Customers</h3>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-sm-12 col-12 ">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-titles">Basic Details</h2>
+                        </div>
+                        <div class="card-body">
+
+
+                            <div class="row">
+
+                                <div class="col-xl-6 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input type="text" placeholder="Name" id="txt-cust-name">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Gender</label>
+                                        <select class="select" id="txt-cust-gender">
+                                            <option value="Select leave">Gender</option>
+                                            <option value="MALE">Male</option>
+                                            <option value="FEMALE">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <!--DOB-->
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Date of Birth</label>
+                                        <input type="date" placeholder="Date of Birth" id="txt-cust-dob">
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="row">
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Building No / Name</label>
+                                        <input type="text" placeholder="Building No / Name" id="txt-cust-build-no">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Lane</label>
+                                        <input type="text" placeholder="Lane" id="txt-cust-lane">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Main City</label>
+                                        <input type="text" placeholder="Main City" id="txt-cust-city">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Main State</label>
+                                        <input type="text" placeholder="Main State" id="txt-cust-state">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Postal Code</label>
+                                        <input type="text" placeholder="Postal Code" id="txt-cust-post-code">
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-header">
+                            <h2 class="card-titles">Contact Details</h2>
+                        </div>
+
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Contact</label>
+                                        <input type="text" placeholder="Contact" id="txt-cust-contact">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="text" placeholder="Email" id="txt-cust-email">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-header">
+                            <h2 class="card-titles">Customer Details</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Customer code</label>
+                                        <input type="text" placeholder="C001" disabled id="txt-cust-code">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Level</label>
+                                        <select class="select" id="txt-cust-level">
+                                            <option value="">Level</option>
+                                            <option value="GOLD">GOLD</option>
+                                            <option value="SILVER">SILVER</option>
+                                            <option value="BRONZE">BRONZE</option>
+                                            <option value="NEW">NEW</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Register Date</label>
+                                        <input type="date" placeholder="Date of Join" id="txt-cust-reg-date">
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row justify-content-end mb-5 mr-5">
+
+                                <button class="btn btn-primary text-white btn-operations" id="btn-cust-clear">Clear
+                                </button>
+                                <button class="btn btn-warning btn-operations" id="btn-cust-update"
+                                        style="display: none;">Update
+                                </button>
+                                <button class="btn btn-success btn-operations" id="btn-cust-save">Save</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
-            <div class="col-xl-12 col-sm-12 col-12 ">
+        </div>
+
+
+    </div>
+
+
+    <!--Supplier page-->
+    <div class="page-wrapper" id="supplier-page">
+        <div class="content container-fluid">
+            <div class="row">
+                <div class="col-xl-12 col-sm-12 col-12">
+                    <div class="breadcrumb-path mb-4">
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item active"><img id="sum-img" src="../assets/img/item_sum.png"
+                                                                    alt="sidebar_img"></li>
+                        </ul>
+                        <h3 class="sum-txt">Manage Suppliers</h3>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-sm-12 col-12 mb-4">
+                    <div class="row">
+                        <div class="col-xl-2 col-sm-8 col-12">
+                            <label class="employee_count text-center"><span id="lbl-supplier-total"></span> <br>
+                                Total Supplier</label>
+                        </div>
+                        <div class="col-xl-2 col-sm-8 col-12">
+                            <label class="employee_count text-center"><span id="lbl-supplier-local"></span> <br>
+                                Local</label>
+                        </div>
+                        <div class="col-xl-2 col-sm-8 col-12">
+                            <label class="employee_count text-center"><span id="lbl-supplier-international"></span>
+                                <br> International</label>
+                        </div>
+                        <div class="col-xl-6 col-sm-8 col-12">
+                            <img src="../assets/img/undraw-supplier.svg" class="float-right" style="width: 150px">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-sm-12 col-12 mb-4">
+                    <div class="card">
+                        <div class="table-heading">
+                            <!-- Button here -->
+                            <label class="table-title" style="font-size: 25px;font-weight: 700">Supplier
+                                Summary </label>
+                            <button class="btn btn-success btn-emp-add float-right" id="btn-register-supplier"
+                                    style="width: 50px"><img src="../assets/img/add-emp.png" style="width: 30px">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table  custom-table no-footer" id="tbl-supplier">
+                            <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Name</th>
+                                <th>Contact</th>
+                                <th>Category</th>
+                                <th>Country</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- add supplier page-->
+    <div class="page-wrapper" id="supplier-register-page">
+        <div class="content container-fluid">
+            <div class="row">
+                <div class="col-xl-12 col-sm-12 col-12 ">
+                    <div class="breadcrumb-path mb-4">
+                        <ul class="breadcrumb">
+                            <li><label id="btn-sup-home"><i class='bx bxs-home-circle'></i>Home</label>
+                            </li>
+                        </ul>
+                        <h3 class="sum-txt">Register Suppliers</h3>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-sm-12 col-12 ">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-titles">Basic Details</h2>
+                        </div>
+                        <div class="card-body">
+
+
+                            <div class="row">
+
+                                <div class="col-xl-4 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Supplier Code</label>
+                                        <input type="text" placeholder="Supplier Id" id="txt-sup-code" readonly>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xl-4 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input type="text" placeholder="Name" id="txt-sup-name">
+                                    </div>
+                                </div>
+
+
+                                <!--Category-->
+                                <div class="col-xl-4 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Category</label>
+                                        <select class="select" id="txt-sup-category">
+                                            <option value="">Category</option>
+                                            <option value="INTERNATIONAL">International</option>
+                                            <option value="LOCAL">Local</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="row">
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Building No / Name</label>
+                                        <input type="text" placeholder="Building No / Name"
+                                               id="txt-sup-building-no">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Lane</label>
+                                        <input type="text" placeholder="Lane" id="txt-sup-lane">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Main City</label>
+                                        <input type="text" placeholder="Main City" id="txt-sup-city">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>State</label>
+                                        <input type="text" placeholder="Main State" id="txt-sup-state">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Postal Code</label>
+                                        <input type="text" placeholder="Postal Code" id="txt-sup-postal-code">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Country</label>
+                                        <input type="text" placeholder="Country" id="txt-sup-country">
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-header">
+                            <h2 class="card-titles">Contact Details</h2>
+                        </div>
+
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Contact</label>
+                                        <input type="text" placeholder="Contact" id="txt-sup-contact">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Land Line</label>
+                                        <input type="text" placeholder="Contact" id="txt-sup-land-line">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="text" placeholder="Email" id="txt-sup-email">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div>
+                            <div class="row justify-content-end mb-5 mr-5">
+
+                                <button class="btn btn-primary text-white btn-operations" id="btn-sup-clear">Clear
+                                </button>
+                                <button class="btn btn-warning btn-operations" id="btn-sup-update"
+                                        style="display: none;">Update
+                                </button>
+                                <button class="btn btn-success btn-operations" id="btn-sup-save">Save</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Inventory page-->
+    <div class="page-wrapper" id="inventory-page">
+        <div class="content container-fluid">
+            <div class="row">
+                <div class="col-xl-12 col-sm-12 col-12">
+                    <div class="breadcrumb-path mb-4">
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item active"><img src="../assets/img/item_sum.png"
+                                                                    alt="sidebar_img" id="sum-img"></li>
+                        </ul>
+                        <h3 class="sum-txt">Manage Inventories</h3>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-sm-12 col-12 mb-4">
+                    <div class="row">
+                        <div class="col-xl-2 col-sm-8 col-12">
+                            <label class="employee_count text-center"><span id="lbl-inventory-count">7</span> <br>
+                                Total Inventories</label>
+                        </div>
+                        <div class="col-xl-4 col-sm-8 col-12">
+                        </div>
+                        <div class="col-xl-6 col-sm-8 col-12">
+                            <img src="../assets/img/undraw-shoe.svg" class="float-right" style="width: 150px">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-12 col-sm-12 col-12 mb-4">
+                    <div class="card">
+                        <div class="table-heading">
+                            <!-- Button here -->
+                            <label class="table-title" style="font-size: 25px;font-weight: 700">Inventory
+                                Summary </label>
+                            <button class="btn btn-success btn-emp-add float-right" id="btn-add-inventory"
+                                    style="width: 50px"><img src="../assets/img/add.png" style="width: 30px">
+                            </button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table  custom-table no-footer" id="tbl-inventory">
+                                <thead>
+                                <tr>
+                                    <th>Inventory Code</th>
+                                    <th>Description</th>
+                                    <th>Supplier</th>
+                                    <th>Occasion</th>
+                                    <th>Verities</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- add Inventory page-->
+    <div class="page-wrapper" id="inventory-register-page">
+        <div class="content container-fluid">
+            <div class="row">
+                <div class="col-xl-12 col-sm-12 col-12 ">
+                    <div class="breadcrumb-path mb-4">
+                        <ul class="breadcrumb">
+                            <li><label id="btn-inventory-home"><i class='bx bxs-home-circle'></i>Home</label>
+                            </li>
+                        </ul>
+                        <h3 class="sum-txt">Register Inventory</h3>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-sm-12 col-12 ">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-titles">Basic Details</h2>
+                        </div>
+                        <div class="card-body">
+
+                            <div class="row justify-content-center">
+                                <div class="mt-3">
+                                    <img id="invent-img-preview" class="img-fluid custom-image" alt="Image Preview"
+                                         src="../assets/img/no-image-img.jpg">
+                                </div>
+
+
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="mb-3">
+                                    <label for="item_image" class="form-label">Item Image</label>
+                                    <input class="form-control" type="file" id="item_image"
+                                           onchange="inventImgPreview(this)">
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Item Code</label>
+                                        <input type="text" placeholder="Item Code" id="txt-item-code" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Item Description</label>
+                                        <input type="text" placeholder="Item Description" id="txt-inventory-desc">
+                                    </div>
+                                </div>
+
+
+                                <!--Supplier Name-->
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Supplier Name</label>
+                                        <select class="select" id="txt-inventory-supplier-name">
+                                            <option value="Select Supplier">Select</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Supplier Id</label>
+                                        <input type="text" placeholder="Supplier Id" id="txt-inventory-supplier-id"
+                                               readonly>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                        <div class="card-header invent-size-class">
+                            <h2 class="card-titles">Size Classification</h2>
+                        </div>
+
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xl-3 col-sm-12 col-12 invent-size-class">
+                                    <div class="form-group">
+                                        <label>Size</label>
+                                        <select class="select" id="txt-inventory-size">
+                                            <option value="Select Size">Select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-sm-12 col-12 invent-size-class">
+                                    <div class="form-group">
+                                        <label>Qty</label>
+                                        <input type="text" placeholder="Qty" id="txt-inventory-qty">
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-sm-12 col-12 invent-size-class">
+                                    <div class="form-group">
+                                        <label>Buying Price</label>
+                                        <input type="text" placeholder="Buying Price"
+                                               id="txt-inventory-buying-price">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-12 col-12 invent-size-class">
+                                    <div class="form-group">
+                                        <label>Selling Price</label>
+                                        <input type="text" placeholder="Selling Price"
+                                               id="txt-inventory-selling-price">
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="row">
+
+
+                                <div class="col-xl-3 col-sm-12 col-12 invent-size-class">
+                                    <div class="form-group">
+                                        <label>Expected Profit</label>
+                                        <input type="text" placeholder="Profit Margin"
+                                               id="txt-inventory-expected-profit"
+                                               readonly>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-sm-12 col-12 invent-size-class">
+                                    <div class="form-group">
+                                        <label>Profit Margin</label>
+                                        <input type="text" placeholder="Profit Margin"
+                                               id="txt-inventory-profit-margin"
+                                               readonly>
+                                    </div>
+                                </div>
+
+                                <di class="col-xl-1 col-sm-12 col-12 invent-size-class">
+                                    <div class="d-flex align-items-center justify-content-center"
+                                         style="height: 100%;">
+                                        <button class="btn btn-success btn-operations"
+                                                id="btn-add-inventory-details"> +
+                                            Add
+                                        </button>
+                                    </div>
+                                </di>
+
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-xl-12 col-sm-12 col-12 ">
+                                    <!--table-->
+                                    <div class="table-responsive">
+                                        <table class="table  custom-table no-footer" id="tbl-inventory-details">
+                                            <thead>
+                                            <tr>
+                                                <th>Size</th>
+                                                <th>Qty</th>
+                                                <th>Buying Price</th>
+                                                <th>Selling Price</th>
+                                                <th>Expected Profit</th>
+                                                <th>Profit Margin</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="card-header">
+                            <h2 class="card-titles">Inventory Classification</h2>
+                        </div>
+
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Gender</label>
+                                        <select class="select" id="txt-inventory-gender">
+                                            <option value="Select Gender">Select</option>
+                                            <option value="MALE">MALE</option>
+                                            <option value="FEMALE">FEMALE</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Occasion</label>
+                                        <select class="select" id="txt-inventory-occasion">
+                                            <option value="Select Occasion">Select</option>
+                                            <!--FORMAL,CASUAL,INDUSTRIAL,SPORT;-->
+                                            <option value="FORMAL">FORMAL</option>
+                                            <option value="CASUAL">CASUAL</option>
+                                            <option value="INDUSTRIAL">INDUSTRIAL</option>
+                                            <option value="SPORT">SPORT</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xl-3 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Verities</label>
+                                        <select class="select" id="txt-inventory-verities">
+                                            <option value="Select Verities">Select</option>
+                                            <!-- HEEL,FLATS,WEDGES,FLIP,SANDALS,SHOES,SLIPPERS;-->
+                                            <option value="HEEL">HEEL</option>
+                                            <option value="FLATS">FLATS</option>
+                                            <option value="WEDGES">WEDGES</option>
+                                            <option value="FLIP">FLIP</option>
+                                            <option value="SANDALS">SANDALS</option>
+                                            <option value="SHOES">SHOES</option>
+                                            <option value="SLIPPERS">SLIPPERS</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <div>
+                            <div class="row justify-content-end mb-5 mr-5">
+
+                                <button class="btn btn-primary text-white btn-operations" id="btn-inventory-clear">
+                                    Clear
+                                </button>
+                                <button class="btn btn-warning btn-operations" id="btn-inventory-update"
+                                        style="display: none;">Update
+                                </button>
+                                <button class="btn btn-success btn-operations" id="btn-inventory-save">Save</button>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Size page-->
+    <div class="page-wrapper" id="size-page">
+        <div class="content container-fluid">
+            <div class="row">
+                <div class="col-xl-12 col-sm-12 col-12">
+                    <div class="breadcrumb-path mb-4">
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item active"><img id="sum-img" src="../assets/img/item_sum.png"
+                                                                    alt="sidebar_img"></li>
+                        </ul>
+                        <h3 class="sum-txt">Manage Sizes</h3>
+                    </div>
+                </div>
+
+                <div class="col-xl-12 col-sm-12 col-12 mb-4">
+                    <div class="card">
+                        <div class="table-heading">
+                            <!-- Button here -->
+                            <label class="table-title" style="font-size: 25px;font-weight: 700">Supplier
+                                Summary </label>
+                            <button class="btn btn-success btn-emp-add float-right" id="btn-add-size"
+                                    style="width: 50px"><img src="../assets/img/add.png" style="width: 30px">
+                            </button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table  custom-table no-footer" id="tbl-size">
+                                <thead>
+                                <tr>
+                                    <th>Size Code</th>
+                                    <th>Size</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- add size page-->
+    <div class="page-wrapper" id="size-register-page">
+        <div class="content container-fluid">
+            <div class="row">
+                <div class="col-xl-12 col-sm-12 col-12 ">
+                    <div class="breadcrumb-path mb-4">
+                        <ul class="breadcrumb">
+                            <li><label id="btn-size-home"><i class='bx bxs-home-circle'></i>Home</label>
+                            </li>
+                        </ul>
+                        <h3 class="sum-txt">Add Size</h3>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-sm-12 col-12 ">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-titles">Size Details</h2>
+                        </div>
+                        <div class="card-body">
+
+
+                            <div class="row">
+
+                                <div class="col-xl-4 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Size Code</label>
+                                        <input type="text" placeholder="Size Code" id="txt-size-code">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xl-4 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Size</label>
+                                        <input type="text" placeholder="Size" id="txt-size" readonly>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+                        <div>
+                            <div class="row justify-content-center mb-5 mr-5">
+
+                                <button class="btn btn-primary text-white btn-operations" id="btn-size-clear">Clear
+                                </button>
+                                <button class="btn btn-warning btn-operations" id="btn-size-update"
+                                        style="display: none;">Update
+                                </button>
+                                <button class="btn btn-success btn-operations" id="btn-size-save">Save</button>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--Branch page-->
+    <div class="page-wrapper" id="branch-page">
+        <div class="content container-fluid">
+            <div class="row">
+                <div class="col-xl-12 col-sm-12 col-12">
+                    <div class="breadcrumb-path mb-4">
+                        <ul class="breadcrumb">
+                            <img id="sum-img" src="../assets/img/item_sum.png"/>
+                        </ul>
+                        <h3 class="sum-txt">Manage Branches</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-12 col-sm-12 col-12 mb-4">
                 <div class="card">
-                    <div class="card-header">
-                        <h2 class="card-titles">Basic Details</h2>
+                    <div class="table-heading">
+                        <label class="table-title" style="font-size: 25px;font-weight: 700">Branches
+                            Summary </label>
+                        <button class="btn btn-success btn-emp-add float-right" id="btn-add-branch"
+                                style="width: 50px"><img src="../assets/img/add.png" style="width: 30px">
+                        </button>
                     </div>
-                    <div class="card-body">
+                </div>
+                <div class="table-responsive">
+                    <table class="table  custom-table no-footer" id="tbl-branch">
+                        <thead>
+                        <tr>
+                            <th>Branch Code</th>
+                            <th>Name</th>
+                            <th>Branch Manager</th>
+                            <th>No. of Emp</th>
+                            <th>Contact</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
 
-                        <div class="row justify-content-center">
-                            <div class="mt-3">
-                                <img id="invent-img-preview" class="img-fluid custom-image" alt="Image Preview"
-                                     src="../assets/img/no-image-img.jpg">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- add branch page-->
+    <div class="page-wrapper" id="branch-register-page">
+        <div class="content container-fluid">
+            <div class="row">
+                <div class="col-xl-12 col-sm-12 col-12 ">
+                    <div class="breadcrumb-path mb-4">
+                        <ul class="breadcrumb">
+                            <li><label id="btn-branch-home"><i class='bx bxs-home-circle'></i>Home</label>
+                            </li>
+                        </ul>
+                        <h3 class="sum-txt">Register Branch</h3>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-sm-12 col-12 ">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-titles">Basic Details</h2>
+                        </div>
+                        <div class="card-body">
+
+
+                            <div class="row">
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Branch Code Id</label>
+                                        <input type="text" placeholder="Branch Code" id="txt-branch-code" readonly>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Branch Name</label>
+                                        <input type="text" placeholder="Branch Name" id="txt-branch-name">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Branch Manager</label>
+                                        <input type="text" placeholder="Branch Manager" id="txt-branch-manager">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Number Of Employees</label>
+                                        <input type="text" placeholder="No of Employees" id="txt-branch-emp">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Address</label>
+                                        <input type="text" placeholder="Address" id="txt-branch-address">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-2 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label>Contact</label>
+                                        <input type="text" placeholder="Contact" id="txt-branch-contact">
+                                    </div>
+                                </div>
+
+
                             </div>
 
 
                         </div>
-                        <div class="row justify-content-center">
-                            <div class="mb-3">
-                                <label for="item_image" class="form-label">Item Image</label>
-                                <input class="form-control" type="file" id="item_image"
-                                       onchange="inventImgPreview(this)">
+                        <div>
+                            <div class="row justify-content-end mb-5 mr-5">
+
+                                <button class="btn btn-primary text-white btn-operations" id="btn-branch-clear">
+                                    Clear
+                                </button>
+                                <button class="btn btn-warning btn-operations" id="btn-branch-update"
+                                        style="display: none;">Update
+                                </button>
+                                <button class="btn btn-success btn-operations" id="btn-branch-save">Save</button>
+
                             </div>
-
-                        </div>
-
-                        <div class="row">
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Item Code</label>
-                                    <input type="text" placeholder="Item Code" id="txt-item-code" readonly>
-                                </div>
-                            </div>
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Item Description</label>
-                                    <input type="text" placeholder="Item Description" id="txt-inventory-desc">
-                                </div>
-                            </div>
-
-
-                            <!--Supplier Name-->
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Supplier Name</label>
-                                    <select class="select" id="txt-inventory-supplier-name">
-                                        <option value="Select Supplier">Select</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Supplier Id</label>
-                                    <input type="text" placeholder="Supplier Id" id="txt-inventory-supplier-id"
-                                           readonly>
-                                </div>
-                            </div>
-
-
                         </div>
 
 
                     </div>
-                    <div class="card-header invent-size-class">
-                        <h2 class="card-titles">Size Classification</h2>
-                    </div>
+                </div>
+            </div>
+        </div>
 
+    </div>
 
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-xl-3 col-sm-12 col-12 invent-size-class">
+    <!--return page-->
+    <div class="page-wrapper" id="return-page">
+        <div class="card ml-3 mr-3"
+             style="top: 10px;position: relative;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border: 2px  black;border-radius: 20px">
+            <div class="card-header text-center" style="background-color: #133b4f;">
+                <h3 class="text-white">Return Order</h3>
+            </div>
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-header">
+                            <h4>Order Details</h4>
+                        </div>
+                        <div class="row mt-3 text-center">
+
+                            <div class="col-xl-3">
                                 <div class="form-group">
-                                    <label>Size</label>
-                                    <select class="select" id="txt-inventory-size">
-                                        <option value="Select Size">Select</option>
-                                    </select>
+                                    <label>Order ID</label>
+                                    <input type="text" class="form-control" id="txt-return-order-id">
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-sm-12 col-12 invent-size-class">
+
+                            <div class="col-xl-3">
                                 <div class="form-group">
-                                    <label>Qty</label>
-                                    <input type="text" placeholder="Qty" id="txt-inventory-qty">
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-sm-12 col-12 invent-size-class">
-                                <div class="form-group">
-                                    <label>Buying Price</label>
-                                    <input type="text" placeholder="Buying Price"
-                                           id="txt-inventory-buying-price">
+                                    <label>Date</label>
+                                    <label class="font-weight-bold" style="font-size: 1.5rem"
+                                           id="lbl-return-order-date">-</label>
                                 </div>
                             </div>
 
-                            <div class="col-xl-3 col-sm-12 col-12 invent-size-class">
+                            <div class="col-xl-3">
                                 <div class="form-group">
-                                    <label>Selling Price</label>
-                                    <input type="text" placeholder="Selling Price"
-                                           id="txt-inventory-selling-price">
+                                    <label>Time</label>
+                                    <label class="font-weight-bold" style="font-size: 1.5rem"
+                                           id="lbl-return-order-time">-</label>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3">
+                                <div class="form-group">
+                                    <label>Total Amount</label>
+                                    <label class="font-weight-bold" style="font-size: 1.5rem"
+                                           id="lbl-return-order-total">-</label>
                                 </div>
                             </div>
 
 
                         </div>
 
-                        <div class="row">
 
-
-                            <div class="col-xl-3 col-sm-12 col-12 invent-size-class">
+                        <div class="card-header">
+                            <h4>Customer Details</h4>
+                        </div>
+                        <div class="row mt-4 text-center">
+                            <div class="col-xl-3">
                                 <div class="form-group">
-                                    <label>Expected Profit</label>
-                                    <input type="text" placeholder="Profit Margin"
-                                           id="txt-inventory-expected-profit"
-                                           readonly>
+                                    <label>Customer Contact</label>
+                                    <label class="font-weight-bold" style="font-size: 1.5rem"
+                                           id="lbl-return-cust-contact">-</label>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-sm-12 col-12 invent-size-class">
+                            <div class="col-xl-3">
                                 <div class="form-group">
-                                    <label>Profit Margin</label>
-                                    <input type="text" placeholder="Profit Margin"
-                                           id="txt-inventory-profit-margin"
-                                           readonly>
+                                    <label>Customer Name</label>
+                                    <label class="font-weight-bold" style="font-size: 1.5rem"
+                                           id="lbl-return-cust-name">-</label>
                                 </div>
                             </div>
-
-                            <di class="col-xl-1 col-sm-12 col-12 invent-size-class">
-                                <div class="d-flex align-items-center justify-content-center"
-                                     style="height: 100%;">
-                                    <button class="btn btn-success btn-operations"
-                                            id="btn-add-inventory-details"> +
-                                        Add
-                                    </button>
+                            <div class="col-xl-3">
+                                <div class="form-group">
+                                    <label>Total Points</label>
+                                    <label class="font-weight-bold" style="font-size: 1.5rem"
+                                           id="lbl-return-cust-points">-</label>
                                 </div>
-                            </di>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="form-group">
+                                    <label>Recent Perches</label>
+                                    <label class="font-weight-bold" style="font-size: 1.5rem"
+                                           id="lbl-return-cust-recent">-</label>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="card-header">
+                            <h4>Inventory Details</h4>
                         </div>
 
 
-                        <div class="row">
+                        <div class="row mb-3">
                             <div class="col-xl-12 col-sm-12 col-12 ">
                                 <!--table-->
                                 <div class="table-responsive">
-                                    <table class="table  custom-table no-footer" id="tbl-inventory-details">
+                                    <table class="table  custom-table no-footer" id="tbl-return-order-details">
                                         <thead>
                                         <tr>
+                                            <th>Product Code</th>
+                                            <th>Product Description</th>
                                             <th>Size</th>
                                             <th>Qty</th>
-                                            <th>Buying Price</th>
-                                            <th>Selling Price</th>
-                                            <th>Expected Profit</th>
-                                            <th>Profit Margin</th>
+                                            <th>Unit Price</th>
+                                            <th>Total</th>
                                             <th>Actions</th>
                                         </tr>
                                         </thead>
                                         <tbody>
+
 
                                         </tbody>
                                     </table>
                                 </div>
 
                             </div>
-
-
                         </div>
 
-
-                    </div>
-
-
-                    <div class="card-header">
-                        <h2 class="card-titles">Inventory Classification</h2>
-                    </div>
-
-
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Gender</label>
-                                    <select class="select" id="txt-inventory-gender">
-                                        <option value="Select Gender">Select</option>
-                                        <option value="MALE">MALE</option>
-                                        <option value="FEMALE">FEMALE</option>
-
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Occasion</label>
-                                    <select class="select" id="txt-inventory-occasion">
-                                        <option value="Select Occasion">Select</option>
-                                        <!--FORMAL,CASUAL,INDUSTRIAL,SPORT;-->
-                                        <option value="FORMAL">FORMAL</option>
-                                        <option value="CASUAL">CASUAL</option>
-                                        <option value="INDUSTRIAL">INDUSTRIAL</option>
-                                        <option value="SPORT">SPORT</option>
-                                    </select>
-                                </div>
-                            </div>
-
-
-                            <div class="col-xl-3 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Verities</label>
-                                    <select class="select" id="txt-inventory-verities">
-                                        <option value="Select Verities">Select</option>
-                                        <!-- HEEL,FLATS,WEDGES,FLIP,SANDALS,SHOES,SLIPPERS;-->
-                                        <option value="HEEL">HEEL</option>
-                                        <option value="FLATS">FLATS</option>
-                                        <option value="WEDGES">WEDGES</option>
-                                        <option value="FLIP">FLIP</option>
-                                        <option value="SANDALS">SANDALS</option>
-                                        <option value="SHOES">SHOES</option>
-                                        <option value="SLIPPERS">SLIPPERS</option>
-                                    </select>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-
-                    <div>
-                        <div class="row justify-content-end mb-5 mr-5">
-
-                            <button class="btn btn-primary text-white btn-operations" id="btn-inventory-clear">
-                                Clear
-                            </button>
-                            <button class="btn btn-warning btn-operations" id="btn-inventory-update"
-                                    style="display: none;">Update
-                            </button>
-                            <button class="btn btn-success btn-operations" id="btn-inventory-save">Save</button>
-
-                        </div>
-                    </div>
-
-
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!--Size page-->
-<div class="page-wrapper" id="size-page">
-    <div class="content container-fluid">
-        <div class="row">
-            <div class="col-xl-12 col-sm-12 col-12">
-                <div class="breadcrumb-path mb-4">
-                    <ul class="breadcrumb">
-                        <li class="breadcrumb-item active"><img id="sum-img" src="../assets/img/item_sum.png"
-                                                                alt="sidebar_img"></li>
-                    </ul>
-                    <h3 class="sum-txt">Manage Sizes</h3>
-                </div>
-            </div>
-
-            <div class="col-xl-12 col-sm-12 col-12 mb-4">
-                <div class="card">
-                    <div class="table-heading">
-                        <!-- Button here -->
-                        <label class="table-title" style="font-size: 25px;font-weight: 700">Supplier
-                            Summary </label>
-                        <button class="btn btn-success btn-emp-add float-right" id="btn-add-size"
-                                style="width: 50px"><img src="../assets/img/add.png" style="width: 30px">
-                        </button>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table  custom-table no-footer" id="tbl-size">
-                            <thead>
-                            <tr>
-                                <th>Size Code</th>
-                                <th>Size</th>
-                                <th>Action</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!-- add size page-->
-<div class="page-wrapper" id="size-register-page">
-    <div class="content container-fluid">
-        <div class="row">
-            <div class="col-xl-12 col-sm-12 col-12 ">
-                <div class="breadcrumb-path mb-4">
-                    <ul class="breadcrumb">
-                        <li><label id="btn-size-home"><i class='bx bxs-home-circle'></i>Home</label>
-                        </li>
-                    </ul>
-                    <h3 class="sum-txt">Add Size</h3>
-                </div>
-            </div>
-            <div class="col-xl-12 col-sm-12 col-12 ">
-                <div class="card">
-                    <div class="card-header">
-                        <h2 class="card-titles">Size Details</h2>
-                    </div>
-                    <div class="card-body">
-
-
-                        <div class="row">
-
-                            <div class="col-xl-4 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Size Code</label>
-                                    <input type="text" placeholder="Size Code" id="txt-size-code">
-                                </div>
-                            </div>
-
-
-                            <div class="col-xl-4 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Size</label>
-                                    <input type="text" placeholder="Size" id="txt-size" readonly>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-
-                    </div>
-
-                    <div>
-                        <div class="row justify-content-center mb-5 mr-5">
-
-                            <button class="btn btn-primary text-white btn-operations" id="btn-size-clear">Clear
-                            </button>
-                            <button class="btn btn-warning btn-operations" id="btn-size-update"
-                                    style="display: none;">Update
-                            </button>
-                            <button class="btn btn-success btn-operations" id="btn-size-save">Save</button>
-
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-
-<!--Branch page-->
-<div class="page-wrapper" id="branch-page">
-    <div class="content container-fluid">
-        <div class="row">
-            <div class="col-xl-12 col-sm-12 col-12">
-                <div class="breadcrumb-path mb-4">
-                    <ul class="breadcrumb">
-                        <img id="sum-img" src="../assets/img/item_sum.png"/>
-                    </ul>
-                    <h3 class="sum-txt">Manage Branches</h3>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xl-12 col-sm-12 col-12 mb-4">
-            <div class="card">
-                <div class="table-heading">
-                    <label class="table-title" style="font-size: 25px;font-weight: 700">Branches
-                        Summary </label>
-                    <button class="btn btn-success btn-emp-add float-right" id="btn-add-branch"
-                            style="width: 50px"><img src="../assets/img/add.png" style="width: 30px">
-                    </button>
-                </div>
-            </div>
-            <div class="table-responsive">
-                <table class="table  custom-table no-footer" id="tbl-branch">
-                    <thead>
-                    <tr>
-                        <th>Branch Code</th>
-                        <th>Name</th>
-                        <th>Branch Manager</th>
-                        <th>No. of Emp</th>
-                        <th>Contact</th>
-                        <th>Action</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!-- add branch page-->
-<div class="page-wrapper" id="branch-register-page">
-    <div class="content container-fluid">
-        <div class="row">
-            <div class="col-xl-12 col-sm-12 col-12 ">
-                <div class="breadcrumb-path mb-4">
-                    <ul class="breadcrumb">
-                        <li><label id="btn-branch-home"><i class='bx bxs-home-circle'></i>Home</label>
-                        </li>
-                    </ul>
-                    <h3 class="sum-txt">Register Branch</h3>
-                </div>
-            </div>
-            <div class="col-xl-12 col-sm-12 col-12 ">
-                <div class="card">
-                    <div class="card-header">
-                        <h2 class="card-titles">Basic Details</h2>
-                    </div>
-                    <div class="card-body">
-
-
-                        <div class="row">
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Branch Code Id</label>
-                                    <input type="text" placeholder="Branch Code" id="txt-branch-code" readonly>
-                                </div>
-                            </div>
-
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Branch Name</label>
-                                    <input type="text" placeholder="Branch Name" id="txt-branch-name">
-                                </div>
-                            </div>
-
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Branch Manager</label>
-                                    <input type="text" placeholder="Branch Manager" id="txt-branch-manager">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Number Of Employees</label>
-                                    <input type="text" placeholder="No of Employees" id="txt-branch-emp">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Address</label>
-                                    <input type="text" placeholder="Address" id="txt-branch-address">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-2 col-sm-12 col-12 ">
-                                <div class="form-group">
-                                    <label>Contact</label>
-                                    <input type="text" placeholder="Contact" id="txt-branch-contact">
-                                </div>
-                            </div>
-
-
-                        </div>
-
-
-                    </div>
-                    <div>
-                        <div class="row justify-content-end mb-5 mr-5">
-
-                            <button class="btn btn-primary text-white btn-operations" id="btn-branch-clear">
-                                Clear
-                            </button>
-                            <button class="btn btn-warning btn-operations" id="btn-branch-update"
-                                    style="display: none;">Update
-                            </button>
-                            <button class="btn btn-success btn-operations" id="btn-branch-save">Save</button>
-
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<!--return page-->
-<div class="page-wrapper" id="return-page">
-    <div class="card ml-3 mr-3"
-         style="top: 10px;position: relative;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border: 2px  black;border-radius: 20px">
-        <div class="card-header text-center" style="background-color: #133b4f;">
-            <h3 class="text-white">Return Order</h3>
-        </div>
-
-        <div class="card-body">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card-header">
-                        <h4>Order Details</h4>
-                    </div>
-                    <div class="row mt-3 text-center">
-
-                        <div class="col-xl-3">
-                            <div class="form-group">
-                                <label>Order ID</label>
-                                <input type="text" class="form-control" id="txt-return-order-id">
-                            </div>
-                        </div>
-
-                        <div class="col-xl-3">
-                            <div class="form-group">
-                                <label>Date</label>
-                                <label class="font-weight-bold" style="font-size: 1.5rem"
-                                       id="lbl-return-order-date">-</label>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-3">
-                            <div class="form-group">
-                                <label>Time</label>
-                                <label class="font-weight-bold" style="font-size: 1.5rem"
-                                       id="lbl-return-order-time">-</label>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-3">
-                            <div class="form-group">
-                                <label>Total Amount</label>
-                                <label class="font-weight-bold" style="font-size: 1.5rem"
-                                       id="lbl-return-order-total">-</label>
-                            </div>
-                        </div>
-
-
-                    </div>
-
-
-                    <div class="card-header">
-                        <h4>Customer Details</h4>
-                    </div>
-                    <div class="row mt-4 text-center">
-                        <div class="col-xl-3">
-                            <div class="form-group">
-                                <label>Customer Contact</label>
-                                <label class="font-weight-bold" style="font-size: 1.5rem"
-                                       id="lbl-return-cust-contact">-</label>
-                            </div>
-                        </div>
-                        <div class="col-xl-3">
-                            <div class="form-group">
-                                <label>Customer Name</label>
-                                <label class="font-weight-bold" style="font-size: 1.5rem"
-                                       id="lbl-return-cust-name">-</label>
-                            </div>
-                        </div>
-                        <div class="col-xl-3">
-                            <div class="form-group">
-                                <label>Total Points</label>
-                                <label class="font-weight-bold" style="font-size: 1.5rem"
-                                       id="lbl-return-cust-points">-</label>
-                            </div>
-                        </div>
-                        <div class="col-xl-3">
-                            <div class="form-group">
-                                <label>Recent Perches</label>
-                                <label class="font-weight-bold" style="font-size: 1.5rem"
-                                       id="lbl-return-cust-recent">-</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card-header">
-                        <h4>Inventory Details</h4>
-                    </div>
-
-
-                    <div class="row mb-3">
-                        <div class="col-xl-12 col-sm-12 col-12 ">
-                            <!--table-->
-                            <div class="table-responsive">
-                                <table class="table  custom-table no-footer" id="tbl-return-order-details">
-                                    <thead>
-                                    <tr>
-                                        <th>Product Code</th>
-                                        <th>Product Description</th>
-                                        <th>Size</th>
-                                        <th>Qty</th>
-                                        <th>Unit Price</th>
-                                        <th>Total</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-
-
-                                    </tbody>
-                                </table>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="card-header">
-                        <h4>Return Details</h4>
-                    </div>
-                    <div class="row mt-4">
-
-                        <div class="col-xl-12">
-                            <div class="form-group">
-                                <label>Reason</label>
-                                <input type="text" class="form-control" id="txt-return-reason">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="row justify-content-end mb-5 mr-5">
-
-                            <button class="btn btn-primary text-white btn-operations" id="btn-return-refresh">
-                                Refresh
-                            </button>
-                            <button class="btn btn-success btn-operations" id="btn-return-save">Return</button>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--report page-->
-<div class="page-wrapper" id="report-page">
-
-    <div class="card ml-3 mr-3"
-         style="top: 10px;position: relative;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border: 2px  black;border-radius: 15px">
-        <div class="card-header text-center" style="background-color: #133b4f;">
-            <h4 class="text-white">Sales Reports</h4>
-        </div>
-
-        <div class="card-body">
-            <div class="row">
-
-                <div class="col-xl-6 d-flex">
-                    <div class="card flex-fill">
                         <div class="card-header">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Top Sale Inventory - <span
-                                        class="text-danger">This Month</span></h5>
+                            <h4>Return Details</h4>
+                        </div>
+                        <div class="row mt-4">
+
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label>Reason</label>
+                                    <input type="text" class="form-control" id="txt-return-reason">
+                                </div>
                             </div>
+                        </div>
 
-                            <div class="card-body" id="top-sale-month-card">
+                        <div>
+                            <div class="row justify-content-end mb-5 mr-5">
+
+                                <button class="btn btn-primary text-white btn-operations" id="btn-return-refresh">
+                                    Refresh
+                                </button>
+                                <button class="btn btn-success btn-operations" id="btn-return-save">Return</button>
 
                             </div>
-
-
                         </div>
                     </div>
-                </div>
 
-
-                <div class="col-xl-6 d-flex">
-                    <div class="card flex-fill">
-                        <div class="card-header">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Top Sale Inventory - <span
-                                        class="text-success">This Year</span></h5>
-                            </div>
-
-                            <div class="card-body" id="top-sale-year-card">
-
-                            </div>
-
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="card ml-3 mr-3"
-         style="top: 10px;position: relative;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border: 2px  black;border-radius: 15px">
-        <div class="card-header text-center" style="background-color: #133b4f;">
-            <h5 class="text-white">Sales Reports</h5>
-        </div>
+    <!--report page-->
+    <div class="page-wrapper" id="report-page">
 
-        <div class="card-body">
-            <div class="row">
+        <div class="card ml-3 mr-3"
+             style="top: 10px;position: relative;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border: 2px  black;border-radius: 15px">
+            <div class="card-header text-center" style="background-color: #133b4f;">
+                <h4 class="text-white">Sales Reports</h4>
+            </div>
 
-                <div class="col-xl-6 d-flex">
-                    <div class="card flex-fill">
-                        <div class="card-header">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Total Sales by Branch - This Month</h5>
+            <div class="card-body">
+                <div class="row">
+
+                    <div class="col-xl-6 d-flex">
+                        <div class="card flex-fill">
+                            <div class="card-header">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title">Top Sale Inventory - <span
+                                            class="text-danger">This Month</span></h5>
+                                </div>
+
+                                <div class="card-body" id="top-sale-month-card">
+
+                                </div>
+
+
                             </div>
-                        </div>
-                        <div class="card-body">
-                            <div id="total-sales-this-branch-chart"></div>
                         </div>
                     </div>
-                </div>
 
 
-                <div class="col-xl-6 d-flex">
-                    <div class="card flex-fill">
-                        <div class="card-header">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Total Sales by Branch</h5>
+                    <div class="col-xl-6 d-flex">
+                        <div class="card flex-fill">
+                            <div class="card-header">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title">Top Sale Inventory - <span
+                                            class="text-success">This Year</span></h5>
+                                </div>
+
+                                <div class="card-body" id="top-sale-year-card">
+
+                                </div>
+
                             </div>
-                        </div>
-                        <div class="card-body">
-                            <div id="total-sales-branch-chart"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
+        <div class="card ml-3 mr-3"
+             style="top: 10px;position: relative;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border: 2px  black;border-radius: 15px">
+            <div class="card-header text-center" style="background-color: #133b4f;">
+                <h5 class="text-white">Sales Reports</h5>
+            </div>
 
-    <div class="card ml-3 mr-3"
-         style="top: 10px;position: relative;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border: 2px  black;border-radius: 30px">
-        <div class="card-header text-center" style="background-color: #133b4f;">
-            <h5 class="text-white">Employee Reports</h5>
-        </div>
+            <div class="card-body">
+                <div class="row">
 
-        <div class="card-body">
-            <div class="row">
-                <div class="col-xl-6 d-flex mobile-h">
-                    <div class="card flex-fill">
-                        <div class="card-header">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Total Employees</h5>
+                    <div class="col-xl-6 d-flex">
+                        <div class="card flex-fill">
+                            <div class="card-header">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title">Total Sales by Branch - This Month</h5>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="total-sales-this-branch-chart"></div>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <div id="all-employees-count-chart"></div>
-                            <div class="text-center text-muted">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <div class="mt-4">
-                                            <p class="mb-2 text-truncate"><i
-                                                    class="fas fa-circle text-primary mr-1"></i> Manager</p>
+                    </div>
+
+
+                    <div class="col-xl-6 d-flex">
+                        <div class="card flex-fill">
+                            <div class="card-header">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title">Total Sales by Branch</h5>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="total-sales-branch-chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card ml-3 mr-3"
+             style="top: 10px;position: relative;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border: 2px  black;border-radius: 30px">
+            <div class="card-header text-center" style="background-color: #133b4f;">
+                <h5 class="text-white">Employee Reports</h5>
+            </div>
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xl-6 d-flex mobile-h">
+                        <div class="card flex-fill">
+                            <div class="card-header">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title">Total Employees</h5>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="all-employees-count-chart"></div>
+                                <div class="text-center text-muted">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="mt-4">
+                                                <p class="mb-2 text-truncate"><i
+                                                        class="fas fa-circle text-primary mr-1"></i> Manager</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="mt-4">
+                                                <p class="mb-2 text-truncate"><i
+                                                        class="fas fa-circle text-success mr-1"></i> Cashier</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="mt-4">
+                                                <p class="mb-2 text-truncate"><i
+                                                        class="fas fa-circle text-danger mr-1"></i>
+                                                    Stock Keeper</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-4">
-                                        <div class="mt-4">
-                                            <p class="mb-2 text-truncate"><i
-                                                    class="fas fa-circle text-success mr-1"></i> Cashier</p>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="mt-4">
+                                                <p class="mb-2 text-truncate"><i
+                                                        class="fas fa-circle  mr-1" style="color: #fda600"></i>
+                                                    Delivery</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="mt-4">
-                                            <p class="mb-2 text-truncate"><i
-                                                    class="fas fa-circle text-danger mr-1"></i>
-                                                Stock Keeper</p>
+                                        <div class="col-4">
+                                            <div class="mt-4">
+                                                <p class="mb-2 text-truncate"><i
+                                                        class="fas fa-circle mr-1" style="color: #3498DB"></i>
+                                                    Cleaner</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4">
-                                        <div class="mt-4">
-                                            <p class="mb-2 text-truncate"><i
-                                                    class="fas fa-circle  mr-1" style="color: #fda600"></i>
-                                                Delivery</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="mt-4">
-                                            <p class="mb-2 text-truncate"><i
-                                                    class="fas fa-circle mr-1" style="color: #3498DB"></i>
-                                                Cleaner</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="mt-4">
-                                            <p class="mb-2 text-truncate"><i
-                                                    class="fas fa-circle mr-1" style="color: #34495E"></i>
-                                                Security Guard</p>
+                                        <div class="col-4">
+                                            <div class="mt-4">
+                                                <p class="mb-2 text-truncate"><i
+                                                        class="fas fa-circle mr-1" style="color: #34495E"></i>
+                                                    Security Guard</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-6 d-flex">
-                    <div class="card flex-fill">
-                        <div class="card-header">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Total Employees By Branch</h5>
+                    <div class="col-xl-6 d-flex">
+                        <div class="card flex-fill">
+                            <div class="card-header">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title">Total Employees By Branch</h5>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-body">
-                            <div id="total-employees-branch-chart"></div>
+                            <div class="card-body">
+                                <div id="total-employees-branch-chart"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </div>
 
+    <div class="page-wrapper" id="users-page">
+        <div class="card ml-3 mr-3"
+             style="top: 10px;position: relative;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border: 2px  black;border-radius: 30px">
+            <div class="card-header text-center" style="background-color: black;">
+                <h2 class="text-white">Manage Users</h2>
+            </div>
 
-</div>
+            <div class="card-body">
+                <div class="row">
 
-</div>
+                    <div class="col-xl-2 col-sm-12 col-12 ">
+                        <div class="form-group">
+                            <label>Employee ID</label>
+                            <input type="text" placeholder="User Name" id="txt-user-emp-id">
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-12 col-12 ">
+                        <div class="form-group">
+                            <label>Employee Name</label>
+                            <label class="font-weight-bold" style="font-size: 1.5rem"
+                                   id="lbl-user-emp-name">-</label>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-12 col-12 ">
+                        <div class="form-group">
+                            <label>Designation</label>
+                            <label class="font-weight-bold" style="font-size: 1.5rem"
+                                   id="lbl-user-emp-designation">-</label>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-12 col-12 ">
+                        <div class="form-group">
+                            <label>Branch</label>
+                            <label class="font-weight-bold" style="font-size: 1.5rem"
+                                   id="lbl-user-emp-branch">-</label>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="row">
+
+                    <div class="col-xl-2 col-sm-12 col-12 ">
+                        <div class="form-group">
+                            <label>User Name</label>
+                            <input type="text" placeholder="User Name" id="txt-user-name">
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-12 col-12 ">
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" placeholder="Password" id="txt-user-password">
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-12 col-12 ">
+                        <div class="form-group">
+                            <label>Role</label>
+                            <select class="select" id="txt-user-role">
+                                <option value="Select Role">Select</option>
+                                <option value="USER">USER</option>
+                                <option value="ADMIN">ADMIN</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <di class="col-xl-2 col-sm-12 col-12">
+                        <div class="d-flex align-items-center justify-content-center"
+                             style="height: 100%;">
+                            <button class="btn btn-success btn-operations"
+                                    id="btn-user-add"> +
+                                Register
+                            </button>
+                        </div>
+                    </di>
+
+                </div>
+
+
+                <div class="row mb-3">
+                    <div class="col-xl-12 col-sm-12 col-12 ">
+                        <!--table-->
+                        <div class="table-responsive">
+                            <table class="table  custom-table no-footer" id="tbl-users">
+                                <thead>
+                                <tr>
+                                    <th>User Name</th>
+                                    <th>Role</th>
+                                    <th>Employee ID</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 
@@ -2255,6 +2367,7 @@
 <script src="../pages/js/return-page.js"></script>
 <script src="../pages/js/report-page.js"></script>
 <script src="../pages/js/dashboard-page.js"></script>
+<script src="../pages/js/user-page.js"></script>
 <script src="../util/regex.js"></script>
 
 
