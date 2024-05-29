@@ -1,4 +1,3 @@
-
 $('#btn-emp-update').css('display', 'none');
 let employeeImageBase64 = ''; // Define a global variable to store the base64 string
 
@@ -24,8 +23,10 @@ $('#btn-emp-save').click(function () {
     let gender = $('#txt-emp-gender').val();
     if (gender === 'MALE') {
         gender = 0;
-    } else {
+    } else if (gender === 'FEMALE') {
         gender = 1;
+    } else {
+        gender = null;
     }
     let status = $('#txt-emp-status').val();
     let dob = $('#txt-emp-dob').val();
@@ -48,7 +49,6 @@ $('#btn-emp-save').click(function () {
     } else {
         role = 1;
     }
-
 
 
     let employeeDTO = {
@@ -75,8 +75,7 @@ $('#btn-emp-save').click(function () {
         role: role
     };
 
-
-    let valid =  checkValidity(employeeDTO);
+    let valid = checkValidity(employeeDTO);
 
     if (valid) {
 
@@ -103,7 +102,8 @@ $('#btn-emp-save').click(function () {
         });
     }
 
-});
+})
+;
 
 /*edit customer*/
 
@@ -226,7 +226,7 @@ $('#btn-emp-update').click(function () {
     };
     console.log(employeeDTO);
     $.ajax({
-        url: `http://localhost:8081/api/v1/employee`,
+        url: `http://localhost:8080/api/v1/employee`,
         method: 'PUT',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -459,7 +459,6 @@ function clearEmployeeFields() {
 }
 
 
-
 function setEmployeeCounts() {
     $.ajax({
         method: 'GET',
@@ -476,93 +475,102 @@ function setEmployeeCounts() {
     });
 }
 
-function checkValidity(employeeDTO) {
-    // Check for required fields
-    if (!employeeDTO.name || employeeDTO.name.trim() === '') {
-        alert('Name is required');
-        return false;
-    }
-    if (employeeDTO.gender !== 0 && employeeDTO.gender !== 1) {
-        alert('Gender is required');
-        return false;
-    }
-    if (!employeeDTO.status || employeeDTO.status.trim() === '') {
-        alert('Status is required');
-        return false;
-    }
-    if (!employeeDTO.dob || employeeDTO.dob.trim() === '') {
-        alert('Date of Birth is required');
-        return false;
-    }
-    if (!employeeDTO.building_number || employeeDTO.building_number.trim() === '') {
-        alert('Building Number is required');
-        return false;
-    }
-    if (!employeeDTO.lane || employeeDTO.lane.trim() === '') {
-        alert('Lane is required');
-        return false;
-    }
-    if (!employeeDTO.city || employeeDTO.city.trim() === '') {
-        alert('City is required');
-        return false;
-    }
-    if (!employeeDTO.state || employeeDTO.state.trim() === '') {
-        alert('State is required');
-        return false;
-    }
-    if (!employeeDTO.postal_code || employeeDTO.postal_code.trim() === '') {
-        alert('Postal Code is required');
-        return false;
-    }
-    if (!employeeDTO.contact || employeeDTO.contact.trim() === '') {
-        alert('Contact Number is required');
-        return false;
-    }
-    if (!employeeDTO.guardian_contact || employeeDTO.guardian_contact.trim() === '') {
-        alert('Emergency Contact is required');
-        return false;
-    }
-    if (!employeeDTO.guardian_name || employeeDTO.guardian_name.trim() === '') {
-        alert('Guardian Name is required');
-        return false;
-    }
-    if (!employeeDTO.email || employeeDTO.email.trim() === '') {
-        alert('Email is required');
-        return false;
-    }
-    if (!employeeDTO.employee_code || employeeDTO.employee_code.trim() === '') {
-        alert('Employee Code is required');
-        return false;
-    }
-    if (!employeeDTO.designation || employeeDTO.designation.trim() === '') {
-        alert('Designation is required');
-        return false;
-    }
-    if (!employeeDTO.branch || !employeeDTO.branch.branch_code || employeeDTO.branch.branch_code.trim() === '') {
-        alert('Branch Code is required');
-        return false;
-    }
-    if (!employeeDTO.joined_date || employeeDTO.joined_date.trim() === '') {
-        alert('Join Date is required');
-        return false;
-    }
-    /*if (!employeeDTO.role || employeeDTO.role === 'Select role' || employeeDTO.role.trim() === '' || employeeDTO.role === null || employeeDTO.role !== 0 || employeeDTO.role !== 1){
-        alert('Role is required');
-        return false;
-    }*/
+function checkValidity(data) {
+    const showError = (message) => {
+        Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: message,
+            showConfirmButton: false,
+            timer: 1500
+        });
+    };
 
-    // Optional: Additional validation checks
-    if (!validateEmail(employeeDTO.email)) {
-        alert('Invalid email format');
+    // Define regex patterns for specific validations
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const contactPattern = /^\d{10}$/;
+    const currentDate = new Date();
+    const dobDate = new Date(data.dob);
+    const joinDate = new Date(data.joined_date);
+
+    if (!data.name) {
+        showError("Employee name is missing");
+        return false;
+    }
+    if (!(data.gender === 0 || data.gender === 1)) {
+        showError("Gender is missing");
         return false;
     }
 
-    // All validations passed
+    /*   if (!(data.gender.value ==="MALE" || data.gender.value === "FEMALE")){
+           showError("Gender is missing");
+           return false;
+       }*/
+    if (!data.status) {
+        showError("Employee status is missing");
+        return false;
+    }
+
+    if (!data.dob) {
+        showError("Date of birth is missing");
+        return false;
+    } else if (dobDate >= currentDate) {
+        showError("Date of birth cannot be in the future");
+        return false;
+    }
+
+    if (!data.joined_date) {
+        showError("Joining date is missing");
+        return false;
+    } else if (joinDate > currentDate) {
+        showError("Joining date cannot be in the future");
+        return false;
+    }
+
+    if (!data.contact) {
+        showError("Contact number is missing");
+        return false;
+    } else if (!contactPattern.test(data.contact)) {
+        showError("Contact number is invalid");
+        return false;
+    }
+
+    if (!data.email) {
+        showError("Email is missing");
+        return false;
+    } else if (!emailPattern.test(data.email)) {
+        showError("Email is invalid");
+        return false;
+    }
+
+    if (!data.building_number) {
+        showError("Building number is missing");
+        return false;
+    }
+
+    if (!data.lane) {
+        showError("Lane is missing");
+        return false;
+    }
+
+    if (!data.city) {
+        showError("City is missing");
+        return false;
+    }
+
+
+    if (!data.branch.branch_code) {
+        showError("Branch is missing");
+        return false;
+    }
+
+
+    if (!data.designation) {
+        showError("Designation is missing");
+        return false;
+    }
+
+    // Add more field validations as needed
+
     return true;
-}
-
-function validateEmail(email) {
-    // Simple email validation regex
-    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return re.test(email);
 }
