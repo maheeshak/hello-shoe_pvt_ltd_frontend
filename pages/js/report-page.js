@@ -113,9 +113,13 @@ function getTotalESalesBranchThisMonth() {
     });
 
 }
-
+var chart01;
 function totalSaleBranchThisMonth() {
     var columnCtx = document.getElementById("total-sales-this-branch-chart");
+
+    if (chart01) {
+        chart01.destroy();
+    }
     var columnConfig = {
         colors: ['#1ec1b0'],
         series: [{
@@ -150,8 +154,8 @@ function totalSaleBranchThisMonth() {
         }
     };
 
-    var chart = new ApexCharts(columnCtx, columnConfig);
-    chart.render();
+    chart01 = new ApexCharts(columnCtx, columnConfig);
+    chart01.render();
 }
 
 
@@ -183,9 +187,14 @@ function getBranchSalesDetails() {
     });
 }
 
-
+var chart02;
 function totalSales() {
     var columnCtx = document.getElementById("total-sales-branch-chart");
+
+    if (chart02) {
+        chart02.destroy();
+    }
+
     var columnConfig = {
         colors: ['#7638ff'],
         series: [{
@@ -220,8 +229,8 @@ function totalSales() {
         }
     };
 
-    var chart = new ApexCharts(columnCtx, columnConfig);
-    chart.render();
+    chart02 = new ApexCharts(columnCtx, columnConfig);
+    chart02.render();
 }
 
 
@@ -258,8 +267,13 @@ function getEmpDesigCounts() {
     });
 }
 
+var chart03;
 function allEmployeeCounts() {
     var pieCtx = document.getElementById("all-employees-count-chart");
+
+    if (chart03) {
+        chart03.destroy();
+    }
     var pieConfig = {
         colors: ['#7638ff', '#ff737b', '#fda600', '#1ec1b0', '#3498DB', '#34495E'],
         series: empDesigCounts,
@@ -279,8 +293,8 @@ function allEmployeeCounts() {
         }]
     };
 
-    var chart = new ApexCharts(pieCtx, pieConfig);
-    chart.render();
+    chart03 = new ApexCharts(pieCtx, pieConfig);
+    chart03.render();
 }
 
 
@@ -311,9 +325,14 @@ function getTotalEmpBranch() {
     });
 
 }
-
+var chart04;
 function totalEmpBranch() {
     var columnCtx = document.getElementById("total-employees-branch-chart");
+
+    if (chart04) {
+        chart04.destroy();
+    }
+
     var columnConfig = {
         colors: ['#7638ff'],
         series: [{
@@ -348,8 +367,7 @@ function totalEmpBranch() {
         }
     };
 
-    var chart2 = new ApexCharts(columnCtx, columnConfig);
-    chart2.render();
+    chart04 = new ApexCharts(columnCtx, columnConfig);
+    chart04.render();
 }
-
 
