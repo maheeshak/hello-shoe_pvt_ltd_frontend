@@ -3,6 +3,13 @@ $('#btn-cust-update').css('display', 'none');// Define a global variable to stor
 
 /*save customer*/
 $('#btn-cust-save').click(function () {
+
+
+    if (!validateCustomer()) {
+        return;
+    }
+
+
     let name = $('#txt-cust-name').val();
     let gender = $('#txt-cust-gender').val();
     if (gender === 'MALE') {
@@ -40,7 +47,7 @@ $('#btn-cust-save').click(function () {
 
     $.ajax({
         method: 'POST',
-        url: 'http://localhost:8081/api/v1/customer',
+        url: 'http://localhost:8080/api/v1/customer',
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -90,6 +97,11 @@ $('#tbl-customer').on('click', '.btn-cust-update', function () {
 });
 
 $('#btn-cust-update').click(function () {
+
+    if (!validateCustomer()) {
+        return;
+    }
+
     let name = $('#txt-cust-name').val();
     let gender = $('#txt-cust-gender').val();
     if (gender === 'MALE') {
@@ -205,6 +217,7 @@ function clerCustomerFields() {
     $('#txt-cust-email').val('');
     $('#txt-cust-level').val('');
     $('#txt-cust-reg-date').val('');
+    $('#txt-cust-gender').val('');
     setCustomerCode();
 }
 
@@ -291,4 +304,114 @@ function setCustomerCount(){
             $('#lbl-cust-count').text(customerCount);
         }
     })
+}
+
+function validateCustomer() {
+    const showError = (message) => {
+        Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: message,
+            showConfirmButton: false,
+            timer: 1500
+        });
+    };
+
+    let name = $('#txt-cust-name').val().trim();
+    if (!name) {
+        showError("Customer name is missing");
+        return false;
+    }
+
+    let gender = $('#txt-cust-gender').val();
+    if (!gender || (gender !== 'MALE' && gender !== 'FEMALE')) {
+        showError("Customer gender is invalid");
+        return false;
+    }
+
+    let dob = $('#txt-cust-dob').val().trim();
+    if (!dob) {
+        showError("Customer date of birth is missing");
+        return false;
+    }
+    if (new Date(dob) >= new Date()) {
+        showError("Customer date of birth should be in the past");
+        return false;
+    }
+
+    let build_no = $('#txt-cust-build-no').val().trim();
+    if (!build_no) {
+        showError("Building number is missing");
+        return false;
+    }
+
+    let lane = $('#txt-cust-lane').val().trim();
+    if (!lane) {
+        showError("Lane is missing");
+        return false;
+    }
+
+    let city = $('#txt-cust-city').val().trim();
+    if (!city) {
+        showError("City is missing");
+        return false;
+    }
+
+    let state = $('#txt-cust-state').val().trim();
+    if (!state) {
+        showError("State is missing");
+        return false;
+    }
+
+    let postal_code = $('#txt-cust-post-code').val().trim();
+    if (!postal_code) {
+        showError("Postal code is missing");
+        return false;
+    }
+
+    let contact = $('#txt-cust-contact').val().trim();
+    const contactPattern = /^[0-9]{10}$/; // Adjust the pattern based on the contact number format
+    if (!contact) {
+        showError("Contact number is missing");
+        return false;
+    }
+    if (!contactPattern.test(contact)) {
+        showError("Contact number is invalid");
+        return false;
+    }
+
+    let email = $('#txt-cust-email').val().trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) {
+        showError("Email is missing");
+        return false;
+    }
+    if (!emailPattern.test(email)) {
+        showError("Email is invalid");
+        return false;
+    }
+
+    let cust_code = $('#txt-cust-code').val().trim();
+    if (!cust_code) {
+        showError("Customer code is missing");
+        return false;
+    }
+
+    let level = $('#txt-cust-level').val().trim();
+    if (!level) {
+        showError("Customer level is missing");
+        return false;
+    }
+
+    let reg_date = $('#txt-cust-reg-date').val().trim();
+    if (!reg_date) {
+        showError("Registration date is missing");
+        return false;
+    }
+    if (new Date(reg_date) > new Date()) {
+        showError("Registration date cannot be in the future");
+        return false;
+    }
+
+    return true;
 }
