@@ -205,7 +205,7 @@ $("#btn-order-details-add").click(function () {
             let newTotal = parseInt(newQty) * parseFloat(price);
 
             $(this).find('.action_label2').last().text(newQty);
-            $(this).find('td').eq(6).find('label').text(newTotal.toFixed(2)); // Assuming the 7th column is the total
+            $(this).find('td').eq(5).find('label').text(newTotal.toFixed(2)); // Assuming the 7th column is the total
 
             rowExists = true;
             calculateTotal();
@@ -229,11 +229,9 @@ $("#btn-order-details-add").click(function () {
                             <label class="action_label2">${size}</label>
                         </td>
                         <td>
-                            <label>1</label>
+                            <label>${qty}</label>
                         </td>
-                        <td>
-                            <label class="action_label2">${qty}</label>
-                        </td>
+                   
                         <td>
                             <label>${price}</label>
                         </td>
@@ -266,7 +264,7 @@ $('#tbl-order-details').on('click', '.btn-order-inventory-delete', function () {
 function calculateTotal() {
     let total = 0;
     $('#tbl-order-details tr').each(function () {
-        let rowTotalText = $(this).find('td').eq(6).find('label').text().trim();
+        let rowTotalText = $(this).find('td').eq(5).find('label').text().trim();
         let rowTotal = parseFloat(rowTotalText);
 
         // Check if rowTotal is a valid number
@@ -297,7 +295,7 @@ function clearOrderInventoryFeildes() {
 
 function setOrderID() {
     $.ajax({
-        url: `http://localhost:8081/api/v1/sale/id`,
+        url: `http://localhost:8080/api/v1/sale/id`,
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${token}`
@@ -311,6 +309,12 @@ function setOrderID() {
 
 /*place order*/
 $('#btn-place-order').click(function () {
+    if (!validateOrder()) {
+        return;
+    }
+
+
+
     /*{
         "saleDTO": {
             "order_id": "O001",
@@ -366,7 +370,8 @@ $('#btn-place-order').click(function () {
         let sizeText = $(this).find('.action_label2').first().text();
         /*SIZE1 Remove SIZE text and assign number only*/
         let size = parseInt(sizeText.replace(/\D/g, ''));
-        let qty = $(this).find('.action_label2').last().text();
+        console.log(size);
+        let qty = $(this).find('td').eq(3).find('label').text().trim();
         let price = $(this).find('td').eq(5).find('label').text();
 
         let saleInventoryDetail = {
@@ -453,3 +458,62 @@ function clearOrderFromFeilds() {
     $('#btn-order-card').removeClass('selected');
     $('#txt-order-cust-contact').focus();
 }
+function validateOrder() {
+    const showError = (message) => {
+        Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: message,
+            showConfirmButton: false,
+            timer: 1500
+        });
+    };
+
+    let order_id = $('#lbl-order-id').text();
+    if (!order_id) {
+        showError("Order ID is missing");
+        return false;
+    }
+
+    let total_price = parseFloat($('#txt-order-total').text().replace(/[^\d.]/g, ''));
+    if (isNaN(total_price) || total_price <= 0) {
+        showError("Total price is invalid");
+        return false;
+    }
+
+    /*check available qty < qty*/
+    let available_qty = $('#txt-order-product-av-qty').val();
+    let qty = $('#txt-order-product-buy-qty').val();
+    if (parseInt(qty) > parseInt(available_qty)) {
+        showError("Not enough stock available");
+        return false;
+    }
+
+
+    let customer_name = $('#txt-order-cust-name').val();
+    if (!customer_name) {
+        showError("Customer name is missing");
+        return false;
+    }
+
+    if ($('#tbl-order-details tbody tr').length === 0) {
+        showError("No products in the order");
+        return false;
+    }
+
+    const paymentMethodSelected = $('#btn-order-cash').hasClass('selected') || $('#btn-order-card').hasClass('selected');
+    if (!paymentMethodSelected) {
+        showError("Select a payment method");
+        return false;
+    }
+
+    const multiplePaymentMethodsSelected = $('#btn-order-cash').hasClass('selected') && $('#btn-order-card').hasClass('selected');
+    if (multiplePaymentMethodsSelected) {
+        showError("Select only one payment method");
+        return false;
+    }
+    setOrderID();
+    return true;
+}
+
+
