@@ -1,9 +1,16 @@
 $('#btn-sup-update').css('display', 'none');
 
+const contactPattern = /^\d{10}$/; // Pattern for 10-digit contact number
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Common pattern for validating email address
 
 /*save supplier*/
 
 $('#btn-sup-save').click(function () {
+
+    if (!validateSupplier()) {
+        return;
+    }
+
     let supplierCode = $('#txt-sup-code').val();
     let name = $('#txt-sup-name').val();
     let category = $('#txt-sup-category').val();
@@ -42,7 +49,13 @@ $('#btn-sup-save').click(function () {
         },
         success: function (data) {
             if (data) {
-                alert('Supplier has been saved successfully');
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Supplier has been saved successfully",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
                 loadAllSupplier();
                 setSupplierCode();
                 clearSupplierFields();
@@ -86,6 +99,11 @@ $('#tbl-supplier').on('click', '.btn-sup-update', function () {
 });
 
 $('#btn-sup-update').click(function () {
+
+    if (!validateSupplier()) {
+        return;
+    }
+
     let supplierCode = $('#txt-sup-code').val();
     let name = $('#txt-sup-name').val();
     let category = $('#txt-sup-category').val();
@@ -124,7 +142,16 @@ $('#btn-sup-update').click(function () {
         },
         success: function (data) {
             if (data) {
-                alert('Supplier has been updated successfully');
+
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Supplier has been updated successfully",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+
+
                 loadAllSupplier();
                 navigateToPage('#supplier-page')
                 setSupplierCode();
@@ -263,4 +290,70 @@ function setSupplierCount() {
             }
         }
     );
+}
+
+function validateSupplier() {
+    const showError = (message) => {
+        Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: message,
+            showConfirmButton: false,
+            timer: 1500
+        });
+    };
+
+    let supplierCode = $('#txt-sup-code').val().trim();
+    if (!supplierCode) {
+        showError("Supplier code is missing");
+        return false;
+    }
+
+    let name = $('#txt-sup-name').val().trim();
+    if (!name) {
+        showError("Supplier name is missing");
+        return false;
+    }
+
+    // Other field validations...
+
+    let contact = $('#txt-sup-contact').val().trim();
+    if (!contact) {
+        showError("Contact number is missing");
+        return false;
+    }
+    if (!contactPattern.test(contact)) {
+        showError("Contact number is invalid");
+        return false;
+    }
+
+    let email = $('#txt-sup-email').val().trim();
+    if (!email) {
+        showError("Email is missing");
+        return false;
+    }
+    if (!emailPattern.test(email)) {
+        showError("Email is invalid");
+        return false;
+    }
+
+    if ($('#txt-sup-country').val() === null || $('#txt-sup-country').val() === ""){
+        showError("Please select a country");
+        return false;
+    }
+    let level = $('#txt-sup-category').val().trim();
+    if (level === null || level === ""){
+        showError("Please select a category");
+        return false;
+    }
+
+    return true;
+}
+
+function changeSupplierFiles(){
+
+    $('#btn-sup-update').css('display', 'none');
+    $('#btn-sup-save').css('display', 'block');
+    clearSupplierFields();
+
 }
