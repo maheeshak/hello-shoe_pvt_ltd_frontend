@@ -19,7 +19,7 @@ function setSupplierNames() {
     });
 }
 
-
+setSupplierNames();
 
 /*save inventory*/
 $('#btn-inventory-save').click(function () {
@@ -30,18 +30,6 @@ $('#btn-inventory-save').click(function () {
     let occasion = $('#txt-inventory-occasion').val();
     let verities = $('#txt-inventory-verities').val();
 
-    /*   "inventoryDTO": {
-        "item_desc": "Example item description",
-        "item_pic": "",
-        "occasion": "SPORT",
-        "gender": "FEMALE",
-        "verities": "HEEL",
-        "supplier": {
-            "supplier_code": "S001",
-            "supplier_name": "Example Supplier Inc.",
-            "supplier_address": "123 Supplier Street, Supplier City"
-        }
-    }*/
 
     let inventoryDTO = {
         item_pic: inventImageBase64,
@@ -55,25 +43,6 @@ $('#btn-inventory-save').click(function () {
         }
     }
 
-    /*sizeInventoryDetailsDTO": [
-        {
-            "id": 1,
-            "size": {
-                "size_code": "SIZE2"
-            },
-            "inventory": {
-                "supplier": {
-                    "supplier_code": "S001"
-                }
-            },
-            "status": "AVAILABLE",
-            "qty": 10,
-            "buying_price": 10.0,
-            "selling_price": 20.0,
-            "expected_profit": 100.0,
-            "profit_margin": 0.5
-        }
-    ]*/
 
     let sizeInventoryDetailsDTO = [];
 
@@ -115,21 +84,23 @@ $('#btn-inventory-save').click(function () {
         sizeInventoryDetailsDTO: sizeInventoryDetailsDTO
     };
 
+    if (checkValidity(inventoryDTO)) {
 
-    $.ajax({
-        method: 'post',
-        url: 'http://localhost:8081/api/v1/inventory',
-        headers: {
-            'Authorization': `Bearer ${token}`
-        },
-        contentType: 'application/json',
-        data: JSON.stringify(inventoryDetailsDTO),
-        success: function (data) {
-            alert('Inventory saved successfully');
-            clearInventoryFields();
-            loadAllInventories();
-        }
-    });
+        $.ajax({
+            method: 'post',
+            url: 'http://localhost:8081/api/v1/inventory',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            },
+            contentType: 'application/json',
+            data: JSON.stringify(inventoryDetailsDTO),
+            success: function (data) {
+                alert('Inventory saved successfully');
+                clearInventoryFields();
+                loadAllInventories();
+            }
+        });
+    }
 
 });
 
@@ -150,7 +121,7 @@ $('#tbl-inventory').on('click', '.btn-inventory-delete', function () {
 
             $.ajax({
                 method: 'DELETE',
-                url: `http://localhost:8081/api/v1/inventory?item_code=${inventory_code}`,
+                url: `http://localhost:8080/api/v1/inventory?item_code=${inventory_code}`,
                 headers: {
                     'Authorization': `Bearer ${token}`
                 },
@@ -181,7 +152,7 @@ $('#tbl-inventory').on('click', '.btn-inventory-preview', function () {
     const inventory_code = $(this).closest('tr').find('td:eq(0) .action_label').text().trim();
     $.ajax({
         method: 'get',
-        url: `http://localhost:8081/api/v1/inventory?item_code=${inventory_code}`,
+        url: `http://localhost:8080/api/v1/inventory?item_code=${inventory_code}`,
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -203,7 +174,7 @@ $('#tbl-inventory').on('click', '.btn-inventory-preview', function () {
 
             $.ajax({
                 method: 'get',
-                url: `http://localhost:8081/api/v1/inventory/sizeDetails?item_code=${inventory_code}`,
+                url: `http://localhost:8080/api/v1/inventory/sizeDetails?item_code=${inventory_code}`,
                 headers: {
                     'Authorization': `Bearer ${token}`
                 },
@@ -245,7 +216,7 @@ $('#tbl-inventory').on('click', '.btn-inventory-update', function () {
 
         $.ajax({
             method: 'get',
-            url: `http://localhost:8081/api/v1/inventory?item_code=${inventory_code}`,
+            url: `http://localhost:8080/api/v1/inventory?item_code=${inventory_code}`,
             headers: {
                 'Authorization': `Bearer ${token}`
             },
@@ -266,7 +237,7 @@ $('#tbl-inventory').on('click', '.btn-inventory-update', function () {
 
                 $.ajax({
                     method: 'get',
-                    url: `http://localhost:8081/api/v1/inventory/sizeDetails?item_code=${inventory_code}`,
+                    url: `http://localhost:8080/api/v1/inventory/sizeDetails?item_code=${inventory_code}`,
                     headers: {
                         'Authorization': `Bearer ${token}`
                     },
@@ -301,8 +272,8 @@ $('#tbl-inventory').on('click', '.btn-inventory-update', function () {
 );
 
 $('#btn-inventory-update').click(function () {
-    // let itemCode = $('#txt-item-code').val();
-    // let desc = $('#txt-inventory-desc').val();
+    let itemCode = $('#txt-item-code').val();
+    let desc = $('#txt-inventory-desc').val();
     // let sup_name = $('#txt-inventory-supplier-name').val();
     let sup_id = $('#txt-inventory-supplier-id').val();
     // let gender = $('#txt-inventory-gender').val();
@@ -355,6 +326,12 @@ $('#btn-inventory-update').click(function () {
         }
     ]*/
 
+    let item_dto = {
+        item_code: itemCode,
+        item_pic: inventImageBase64,
+        item_desc: desc,
+    }
+
     let sizeInventoryDetailsDTO = [];
 
     $('#tbl-inventory-details tbody tr').each(function () {
@@ -364,8 +341,8 @@ $('#btn-inventory-update').click(function () {
         let buying_price = $(this).find('td').eq(2).text();
         let selling_price = $(this).find('td').eq(3).text();
         let expected_profit = $(this).find('td').eq(4).text();
-        let profit_margin_percentage = $(this).find('td').eq(5).text();
-        let profit_margin = profit_margin_percentage.substring(0, profit_margin_percentage.length - 1);
+        let profit_margin = $(this).find('td').eq(5).text();
+        /*   let profit_margin = profit_margin_percentage.substring(0, profit_margin_percentage.length - 1);*/
 
 
         let sizeInventoryDetails = {
@@ -397,15 +374,20 @@ $('#btn-inventory-update').click(function () {
     //     sizeInventoryDetailsDTO: sizeInventoryDetailsDTO
     // };
 
+    var formData = new FormData();
+    formData.append('itemDTO', new Blob([JSON.stringify(item_dto)], {type: 'application/json'}));
+    formData.append('sizeInventoryDetailsDTO', new Blob([JSON.stringify(sizeInventoryDetailsDTO)], {type: 'application/json'}));
+
 
     $.ajax({
         method: 'put',
-        url: 'http://localhost:8081/api/v1/inventory',
+        url: 'http://localhost:8080/api/v1/inventory',
         headers: {
             'Authorization': `Bearer ${token}`
         },
-        contentType: 'application/json',
-        data: JSON.stringify(sizeInventoryDetailsDTO),
+        data: formData,
+        contentType: false,
+        processData: false,
         success: function (data) {
             alert('Inventory updated successfully');
             clearInventoryFields();
@@ -422,7 +404,7 @@ $('#btn-inventory-update').click(function () {
 function setSizeCodes() {
     $.ajax({
         method: 'get',
-        url: 'http://localhost:8081/api/v1/size/all',
+        url: 'http://localhost:8080/api/v1/size/all',
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -508,7 +490,7 @@ $('#txt-inventory-selling-price').on('keypress', function (event) {
 
             // Set the values to the respective fields
             $('#txt-inventory-expected-profit').val(expectedProfit.toFixed(2));
-            $('#txt-inventory-profit-margin').val(profitMargin.toFixed(2) + '%');
+            $('#txt-inventory-profit-margin').val(profitMargin.toFixed(2));
         } else {
             // Clear the fields if the inputs are not valid
             document.getElementById('txt_expected_profit').value = '';
@@ -523,7 +505,7 @@ $('#txt-inventory-supplier-name').on('change', function (event) {
     console.log(sup_name);
     $.ajax({
         method: 'get',
-        url: `http://localhost:8081/api/v1/supplier/nameCode?supplier_name=${sup_name}`,
+        url: `http://localhost:8080/api/v1/supplier/nameCode?supplier_name=${sup_name}`,
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -580,7 +562,7 @@ function loadAllInventories() {
 
     $.ajax({
         method: 'GET',
-        url: 'http://localhost:8081/api/v1/inventory/all',
+        url: 'http://localhost:8080/api/v1/inventory/all',
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -629,10 +611,10 @@ function loadAllInventories() {
                                                     src="../assets/img/edit.png"
                                                     alt="edit"
                                                     style="width: 20px; height: 20px;"/></a>
-                                            <a class="btn btn-danger btn-inventory-delete"><img
+                                            <!--<a class="btn btn-danger btn-inventory-delete"><img
                                                     src="../assets/img/remove.png"
                                                     alt="delete"
-                                                    style="width: 20px; height: 20px;"/></a>
+                                                    style="width: 20px; height: 20px;"/></a>-->
                                         </div>
                                     </td>
                                 </tr> `;
@@ -667,7 +649,7 @@ function changeInputFieldsRegister() {
     /*all fields read only*/
     $('#txt-inventory-desc').attr('readonly', false);
     $('#txt-inventory-supplier-name').attr('disabled', false);
-    $('#txt-inventory-supplier-id').attr('readonly', false);
+    $('#txt-inventory-supplafier-id').attr('readonly', false);
     $('#txt-inventory-gender').attr('disabled', false);
     $('#txt-inventory-occasion').attr('disabled', false);
     $('#txt-inventory-verities').attr('disabled', false);
@@ -682,13 +664,20 @@ function changeInputFieldsUpdate() {
     $('#btn-inventory-clear').css('display', 'block');
 
     $('.invent-size-class').css('display', 'block');
+    $('#txt-inventory-desc').attr('readonly', false);
+    $('#txt-inventory-supplier-name').attr('disabled', true);
+    $('#txt-inventory-supplier-id').attr('readonly', true);
+    $('#txt-inventory-gender').attr('disabled', true);
+    $('#txt-inventory-occasion').attr('disabled', true);
+    $('#txt-inventory-verities').attr('disabled', true);
+    $('#item_image').css('display', 'block');
 }
 
 function setInventoryCount() {
     $.ajax(
         {
             method: 'GET',
-            url: 'http://localhost:8081/api/v1/inventory/count',
+            url: 'http://localhost:8080/api/v1/inventory/count',
             headers: {
                 'Authorization': `Bearer ${token}`
             },
@@ -697,4 +686,29 @@ function setInventoryCount() {
             }
         }
     );
+}
+
+function checkValidity(inventory) {
+    const showError = (message) => {
+        Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: message,
+            showConfirmButton: false,
+            timer: 1500
+        });
+    };
+
+    if (inventory.item_desc === '') {
+        showError('Item description is required');
+        return false;
+    }
+
+    /*   if (inventory.supplier.name === '') {
+           showError('Supplier name is required');
+           return false;
+       }*/
+
+
+    return true;
 }
