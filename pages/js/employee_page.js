@@ -226,7 +226,7 @@ $('#btn-emp-update').click(function () {
     };
     console.log(employeeDTO);
     $.ajax({
-        url: `http://localhost:8080/api/v1/employee`,
+        url: `http://localhost:8081/api/v1/employee`,
         method: 'PUT',
         headers: {
             'Authorization': `Bearer ${token}`
