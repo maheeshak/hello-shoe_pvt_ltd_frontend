@@ -555,7 +555,7 @@ a.action_label4 svg {
     font-size: 12px;
     padding: 10px;
     border-radius: 5px;
-    width: 110px;
+    width: 120px;
     text-align: center;
 }
 
@@ -8186,12 +8186,12 @@ a[id="btn-customer"] img {
 #btn-emp-home i {
     font-size: 25px;
 
-
 }
 
-#btn-emp-home:hover {
-    background: white;
-    color: #023d55 !important;
+#btn-emp-home:hover  {
+    /*background: white;
+    color: #023d55 !important;*/
+    background: #224b75;
 }
 
 #btn-cust-home {
@@ -8207,9 +8207,10 @@ a[id="btn-customer"] img {
 
 }
 
-#btn-cust-home:hover {
+#btn-cust-home:hover {/*
     background: white;
-    color:#023d55 !important;
+    color:#023d55 !important;*/
+    background: #224b75;
 }
 
 #btn-sup-home {
@@ -8226,8 +8227,9 @@ a[id="btn-customer"] img {
 }
 
 #btn-sup-home:hover {
-    background: white;
-    color: #023d55 !important;
+   /* background: white;
+    color: #023d55 !important;*/
+    background: #224b75;
 }
 
 #btn-size-home {
@@ -8244,8 +8246,9 @@ a[id="btn-customer"] img {
 }
 
 #btn-size-home:hover {
-    background: white;
-    color: #023d55 !important;
+    /*background: white;
+    color: #023d55 !important;*/
+    background: #224b75;
 }
 
 #btn-branch-home {
@@ -8263,8 +8266,9 @@ a[id="btn-customer"] img {
 }
 
 #btn-branch-home:hover {
-    background: white;
-    color: #023d55 !important;
+   /* background: white;
+    color: #023d55 !important;*/
+    background: #224b75;
 }
 
 #btn-inventory-home {
@@ -8281,8 +8285,10 @@ a[id="btn-customer"] img {
 }
 
 #btn-inventory-home:hover {
-    background: white;
-    color: #023d55 !important;
+   /* background: white;
+    color: #023d55 !important;*/
+
+    background: #224b75;
 }
 
 .btn-payment{
@@ -8335,4 +8341,20 @@ a[id="btn-customer"] img {
     font-family: sans-serif;
     color: white;
 }
+
+#dash-logo {
+    width: 40%;
+    animation: zoomIn 5s alternate-reverse infinite;
+}
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 

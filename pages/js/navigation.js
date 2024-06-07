@@ -21,6 +21,7 @@ navigateToPage('#dashboard-page');
 navBarActive('#btn-dashboard');
 
 
+
 $('#btn-pos').click(function () {
     $('#app-content').css('display', 'none');
     $('#pos-content').css('display', 'block');
@@ -205,7 +206,12 @@ $('#btn-users').click(function () {
     navigateToPage('#users-page');
     loadAllUsers();
 
-})
+});
+
+$('#btn-support').click(function () {
+    navBarActive('#btn-support');
+    navigateToPage('#support-page');
+});
 
 function navigateToPage(page) {
     $('#dashboard-page').css('display', 'none');
@@ -224,6 +230,7 @@ function navigateToPage(page) {
     $('#return-page').css('display', 'none');
     $('#report-page').css('display', 'none');
     $('#users-page').css('display', 'none');
+    $('#support-page').css('display', 'none');
 
 
     if (page === '#supplier-page') {
@@ -256,6 +263,7 @@ function navBarActive(page) {
     $('#btn-return').parent().removeClass('active');
     $('#btn-report').parent().removeClass('active');
     $('#btn-users').parent().removeClass('active');
+    $('#btn-support').parent().removeClass('active');
 
 
     $(page).parent().addClass('active');
@@ -276,6 +284,7 @@ function handlePageFumctionsUsers() {
         $('#btn-size').css('display', 'block');
         $('#btn-branch').css('display', 'block');
         $('#btn-return').css('display', 'block');
+        $('#btn-support').css('display', 'block');
 
     } else {
         $('#btn-employee').css('display', 'none');
@@ -283,6 +292,7 @@ function handlePageFumctionsUsers() {
         $('#btn-branch').css('display', 'none');
         $('#btn-report').css('display', 'none');
         $('#btn-users').css('display', 'none');
+        $('#btn-support').css('display', 'none');
     }
 }
 
@@ -308,4 +318,6 @@ function hideOtherPages() {
     $('#branch-page').css('display', 'none');
     $('#return-page').css('display', 'none');
     $('#report-page').css('display', 'none');
+    $('#users-page').css('display', 'none');
+    $('#support-page').css('display', 'none');
 }

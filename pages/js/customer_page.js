@@ -47,7 +47,7 @@ $('#btn-cust-save').click(function () {
 
     $.ajax({
         method: 'POST',
-        url: 'http://localhost:8080/api/v1/customer',
+        url: 'http://localhost:8081/api/v1/customer',
         headers: {
             'Authorization': `Bearer ${token}`
         },
@@ -306,7 +306,7 @@ function setCustomerCount(){
     })
 }
 
-function validateCustomer() {
+function validateCustomer() { //sweetalert
     const showError = (message) => {
         Swal.fire({
             position: "top-end",
